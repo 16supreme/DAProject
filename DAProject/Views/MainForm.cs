@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAProject.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,16 @@ namespace DAProject
             InitializeComponent();
         }
 
+        bool sideBarExpand = true;
+        ReservasForm reservasForm;
+        PratosForm pratosForm;
+        ExtrasForm extrasForm;
+        MenusForm menuForms;
+        MultasForm multasForm;
+        GestaoClientesForm gestaoClientesForm;
+        FuncionariosForm funcionariosForm;
+
+        //<-- Application Form Handling
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HTCAPTION = 0x2;
         [DllImport("User32.dll")]
@@ -54,6 +65,36 @@ namespace DAProject
         private void buttonClose_Click(object sender, EventArgs e)
         {
             Application.Exit(); 
+        }
+        //Application Form Handling -->
+
+        private void sidebarTransition_Tick(object sender,EventArgs e)
+        {
+            
+            if (sideBarExpand)
+            {
+                
+                sideBar.Width -= 10;
+                if(sideBar.Width <= 95)
+                {
+                    sideBarExpand = false;
+                    sidebarTransition.Stop();
+                }
+            }
+            else
+            {
+                sideBar.Width += 10;
+                if(sideBar.Width >= 200)
+                {
+                    sideBarExpand = true;
+                    sidebarTransition.Stop();
+                }
+            }
+        }
+
+        private void btnSideBar_Click(object sender, EventArgs e)
+        {
+            sidebarTransition.Start();
         }
     }
 }
