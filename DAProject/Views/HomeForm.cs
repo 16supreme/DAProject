@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace DAProject.Views
 {
-    public partial class FuncionariosForm : Form
+    public partial class HomeForm : Form
     {
-        public FuncionariosForm()
+        public HomeForm()
         {
             InitializeComponent();
         }
-
-        
     }
 }

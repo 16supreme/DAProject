@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace DAProject.Views
 {
-    public partial class FuncionariosForm : Form
+    public partial class CardFuncionario : UserControl
     {
-        public FuncionariosForm()
+        public CardFuncionario()
         {
             InitializeComponent();
         }
 
-        
+        private void materialLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

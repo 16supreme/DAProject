@@ -31,42 +31,42 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnHeader = new System.Windows.Forms.Panel();
+            this.btnSideBar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnFormControls = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonMaximize = new System.Windows.Forms.Button();
             this.buttonMinimize = new System.Windows.Forms.Button();
-            this.btnSideBar = new System.Windows.Forms.PictureBox();
             this.sideBar = new System.Windows.Forms.FlowLayoutPanel();
             this.pnHome = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.pnReservas = new System.Windows.Forms.Panel();
+            this.btnReservas = new System.Windows.Forms.Button();
+            this.pnPratos = new System.Windows.Forms.Panel();
+            this.btnPratos = new System.Windows.Forms.Button();
+            this.pnExtras = new System.Windows.Forms.Panel();
+            this.btnExtras = new System.Windows.Forms.Button();
+            this.pnMenus = new System.Windows.Forms.Panel();
+            this.btnMenus = new System.Windows.Forms.Button();
+            this.pnMultas = new System.Windows.Forms.Panel();
+            this.btnMultas = new System.Windows.Forms.Button();
+            this.pnClientes = new System.Windows.Forms.Panel();
+            this.btnClientes = new System.Windows.Forms.Button();
+            this.pnFuncionarios = new System.Windows.Forms.Panel();
+            this.btnFuncionarios = new System.Windows.Forms.Button();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pnReservas = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pnPratos = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pnExtras = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pnMenus = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.pnMultas = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.pnClientes = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.pnFuncionarios = new System.Windows.Forms.Button();
             this.pnHeader.SuspendLayout();
-            this.pnFormControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSideBar)).BeginInit();
+            this.pnFormControls.SuspendLayout();
             this.sideBar.SuspendLayout();
             this.pnHome.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
+            this.pnReservas.SuspendLayout();
+            this.pnPratos.SuspendLayout();
+            this.pnExtras.SuspendLayout();
+            this.pnMenus.SuspendLayout();
+            this.pnMultas.SuspendLayout();
+            this.pnClientes.SuspendLayout();
+            this.pnFuncionarios.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnHeader
@@ -81,6 +81,17 @@
             this.pnHeader.Size = new System.Drawing.Size(1026, 66);
             this.pnHeader.TabIndex = 0;
             this.pnHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            // 
+            // btnSideBar
+            // 
+            this.btnSideBar.Image = ((System.Drawing.Image)(resources.GetObject("btnSideBar.Image")));
+            this.btnSideBar.Location = new System.Drawing.Point(33, 17);
+            this.btnSideBar.Name = "btnSideBar";
+            this.btnSideBar.Size = new System.Drawing.Size(41, 32);
+            this.btnSideBar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSideBar.TabIndex = 1;
+            this.btnSideBar.TabStop = false;
+            this.btnSideBar.Click += new System.EventHandler(this.btnSideBar_Click);
             // 
             // label1
             // 
@@ -143,28 +154,17 @@
             this.buttonMinimize.UseVisualStyleBackColor = false;
             this.buttonMinimize.Click += new System.EventHandler(this.buttonMinimize_Click);
             // 
-            // btnSideBar
-            // 
-            this.btnSideBar.Image = ((System.Drawing.Image)(resources.GetObject("btnSideBar.Image")));
-            this.btnSideBar.Location = new System.Drawing.Point(33, 17);
-            this.btnSideBar.Name = "btnSideBar";
-            this.btnSideBar.Size = new System.Drawing.Size(41, 32);
-            this.btnSideBar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnSideBar.TabIndex = 1;
-            this.btnSideBar.TabStop = false;
-            this.btnSideBar.Click += new System.EventHandler(this.btnSideBar_Click);
-            // 
             // sideBar
             // 
             this.sideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
             this.sideBar.Controls.Add(this.pnHome);
-            this.sideBar.Controls.Add(this.panel4);
-            this.sideBar.Controls.Add(this.panel5);
-            this.sideBar.Controls.Add(this.panel6);
-            this.sideBar.Controls.Add(this.panel7);
-            this.sideBar.Controls.Add(this.panel8);
-            this.sideBar.Controls.Add(this.panel9);
-            this.sideBar.Controls.Add(this.panel10);
+            this.sideBar.Controls.Add(this.pnReservas);
+            this.sideBar.Controls.Add(this.pnPratos);
+            this.sideBar.Controls.Add(this.pnExtras);
+            this.sideBar.Controls.Add(this.pnMenus);
+            this.sideBar.Controls.Add(this.pnMultas);
+            this.sideBar.Controls.Add(this.pnClientes);
+            this.sideBar.Controls.Add(this.pnFuncionarios);
             this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.sideBar.Location = new System.Drawing.Point(0, 66);
@@ -175,216 +175,224 @@
             // 
             // pnHome
             // 
-            this.pnHome.Controls.Add(this.button1);
+            this.pnHome.Controls.Add(this.btnHome);
             this.pnHome.Location = new System.Drawing.Point(3, 18);
             this.pnHome.Name = "pnHome";
             this.pnHome.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
             this.pnHome.Size = new System.Drawing.Size(196, 67);
             this.pnHome.TabIndex = 3;
             // 
-            // button1
+            // btnHome
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-9, -20);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(223, 114);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "                      Home";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(-9, -20);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnHome.Size = new System.Drawing.Size(223, 114);
+            this.btnHome.TabIndex = 2;
+            this.btnHome.Text = "                      Home";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.UseCompatibleTextRendering = true;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // pnReservas
+            // 
+            this.pnReservas.Controls.Add(this.btnReservas);
+            this.pnReservas.Location = new System.Drawing.Point(3, 91);
+            this.pnReservas.Name = "pnReservas";
+            this.pnReservas.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
+            this.pnReservas.Size = new System.Drawing.Size(196, 67);
+            this.pnReservas.TabIndex = 4;
+            // 
+            // btnReservas
+            // 
+            this.btnReservas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnReservas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservas.ForeColor = System.Drawing.Color.White;
+            this.btnReservas.Image = global::DAProject.Properties.Resources.Two_Tickets;
+            this.btnReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReservas.Location = new System.Drawing.Point(-9, -20);
+            this.btnReservas.Name = "btnReservas";
+            this.btnReservas.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnReservas.Size = new System.Drawing.Size(223, 114);
+            this.btnReservas.TabIndex = 2;
+            this.btnReservas.Text = "                      Reservas";
+            this.btnReservas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReservas.UseCompatibleTextRendering = true;
+            this.btnReservas.UseVisualStyleBackColor = false;
+            this.btnReservas.Click += new System.EventHandler(this.btnReservas_Click);
+            // 
+            // pnPratos
+            // 
+            this.pnPratos.Controls.Add(this.btnPratos);
+            this.pnPratos.Location = new System.Drawing.Point(3, 164);
+            this.pnPratos.Name = "pnPratos";
+            this.pnPratos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
+            this.pnPratos.Size = new System.Drawing.Size(196, 67);
+            this.pnPratos.TabIndex = 4;
+            // 
+            // btnPratos
+            // 
+            this.btnPratos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnPratos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPratos.ForeColor = System.Drawing.Color.White;
+            this.btnPratos.Image = global::DAProject.Properties.Resources.Meal;
+            this.btnPratos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPratos.Location = new System.Drawing.Point(-9, -20);
+            this.btnPratos.Name = "btnPratos";
+            this.btnPratos.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnPratos.Size = new System.Drawing.Size(223, 114);
+            this.btnPratos.TabIndex = 2;
+            this.btnPratos.Text = "                      Pratos";
+            this.btnPratos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPratos.UseCompatibleTextRendering = true;
+            this.btnPratos.UseVisualStyleBackColor = false;
+            this.btnPratos.Click += new System.EventHandler(this.btnPratos_Click);
+            // 
+            // pnExtras
+            // 
+            this.pnExtras.Controls.Add(this.btnExtras);
+            this.pnExtras.Location = new System.Drawing.Point(3, 237);
+            this.pnExtras.Name = "pnExtras";
+            this.pnExtras.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
+            this.pnExtras.Size = new System.Drawing.Size(196, 67);
+            this.pnExtras.TabIndex = 4;
+            // 
+            // btnExtras
+            // 
+            this.btnExtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnExtras.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExtras.ForeColor = System.Drawing.Color.White;
+            this.btnExtras.Image = global::DAProject.Properties.Resources.EXtras;
+            this.btnExtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExtras.Location = new System.Drawing.Point(-9, -20);
+            this.btnExtras.Name = "btnExtras";
+            this.btnExtras.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnExtras.Size = new System.Drawing.Size(223, 114);
+            this.btnExtras.TabIndex = 2;
+            this.btnExtras.Text = "                      Extras";
+            this.btnExtras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExtras.UseCompatibleTextRendering = true;
+            this.btnExtras.UseVisualStyleBackColor = false;
+            this.btnExtras.Click += new System.EventHandler(this.btnExtras_Click);
+            // 
+            // pnMenus
+            // 
+            this.pnMenus.Controls.Add(this.btnMenus);
+            this.pnMenus.Location = new System.Drawing.Point(3, 310);
+            this.pnMenus.Name = "pnMenus";
+            this.pnMenus.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
+            this.pnMenus.Size = new System.Drawing.Size(196, 67);
+            this.pnMenus.TabIndex = 4;
+            // 
+            // btnMenus
+            // 
+            this.btnMenus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnMenus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenus.ForeColor = System.Drawing.Color.White;
+            this.btnMenus.Image = global::DAProject.Properties.Resources.Restaurant_Menu;
+            this.btnMenus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenus.Location = new System.Drawing.Point(-9, -20);
+            this.btnMenus.Name = "btnMenus";
+            this.btnMenus.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnMenus.Size = new System.Drawing.Size(223, 114);
+            this.btnMenus.TabIndex = 2;
+            this.btnMenus.Text = "                      Menus";
+            this.btnMenus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenus.UseCompatibleTextRendering = true;
+            this.btnMenus.UseVisualStyleBackColor = false;
+            this.btnMenus.Click += new System.EventHandler(this.btnMenus_Click);
+            // 
+            // pnMultas
+            // 
+            this.pnMultas.Controls.Add(this.btnMultas);
+            this.pnMultas.Location = new System.Drawing.Point(3, 383);
+            this.pnMultas.Name = "pnMultas";
+            this.pnMultas.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
+            this.pnMultas.Size = new System.Drawing.Size(196, 67);
+            this.pnMultas.TabIndex = 4;
+            // 
+            // btnMultas
+            // 
+            this.btnMultas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnMultas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMultas.ForeColor = System.Drawing.Color.White;
+            this.btnMultas.Image = global::DAProject.Properties.Resources.Multas;
+            this.btnMultas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMultas.Location = new System.Drawing.Point(-9, -20);
+            this.btnMultas.Name = "btnMultas";
+            this.btnMultas.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnMultas.Size = new System.Drawing.Size(223, 114);
+            this.btnMultas.TabIndex = 2;
+            this.btnMultas.Text = "                      Multas";
+            this.btnMultas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMultas.UseCompatibleTextRendering = true;
+            this.btnMultas.UseVisualStyleBackColor = false;
+            this.btnMultas.Click += new System.EventHandler(this.btnMultas_Click);
+            // 
+            // pnClientes
+            // 
+            this.pnClientes.Controls.Add(this.btnClientes);
+            this.pnClientes.Location = new System.Drawing.Point(3, 456);
+            this.pnClientes.Name = "pnClientes";
+            this.pnClientes.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
+            this.pnClientes.Size = new System.Drawing.Size(196, 67);
+            this.pnClientes.TabIndex = 4;
+            // 
+            // btnClientes
+            // 
+            this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.ForeColor = System.Drawing.Color.White;
+            this.btnClientes.Image = global::DAProject.Properties.Resources.clients;
+            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.Location = new System.Drawing.Point(-9, -20);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnClientes.Size = new System.Drawing.Size(223, 114);
+            this.btnClientes.TabIndex = 2;
+            this.btnClientes.Text = "                      Clientes";
+            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.UseCompatibleTextRendering = true;
+            this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
+            // pnFuncionarios
+            // 
+            this.pnFuncionarios.Controls.Add(this.btnFuncionarios);
+            this.pnFuncionarios.Location = new System.Drawing.Point(3, 529);
+            this.pnFuncionarios.Name = "pnFuncionarios";
+            this.pnFuncionarios.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
+            this.pnFuncionarios.Size = new System.Drawing.Size(196, 67);
+            this.pnFuncionarios.TabIndex = 4;
+            // 
+            // btnFuncionarios
+            // 
+            this.btnFuncionarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.btnFuncionarios.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFuncionarios.ForeColor = System.Drawing.Color.White;
+            this.btnFuncionarios.Image = global::DAProject.Properties.Resources.Management;
+            this.btnFuncionarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFuncionarios.Location = new System.Drawing.Point(-9, -20);
+            this.btnFuncionarios.Name = "btnFuncionarios";
+            this.btnFuncionarios.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnFuncionarios.Size = new System.Drawing.Size(223, 114);
+            this.btnFuncionarios.TabIndex = 2;
+            this.btnFuncionarios.Text = "                      Funcionários";
+            this.btnFuncionarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFuncionarios.UseCompatibleTextRendering = true;
+            this.btnFuncionarios.UseVisualStyleBackColor = false;
+            this.btnFuncionarios.Click += new System.EventHandler(this.btnFuncionarios_Click);
             // 
             // sidebarTransition
             // 
             this.sidebarTransition.Interval = 10;
             this.sidebarTransition.Tick += new System.EventHandler(this.sidebarTransition_Tick);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.pnReservas);
-            this.panel4.Location = new System.Drawing.Point(3, 91);
-            this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
-            this.panel4.Size = new System.Drawing.Size(196, 67);
-            this.panel4.TabIndex = 4;
-            // 
-            // pnReservas
-            // 
-            this.pnReservas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.pnReservas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnReservas.ForeColor = System.Drawing.Color.White;
-            this.pnReservas.Image = global::DAProject.Properties.Resources.Two_Tickets;
-            this.pnReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pnReservas.Location = new System.Drawing.Point(-9, -20);
-            this.pnReservas.Name = "pnReservas";
-            this.pnReservas.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.pnReservas.Size = new System.Drawing.Size(223, 114);
-            this.pnReservas.TabIndex = 2;
-            this.pnReservas.Text = "                      Reservas";
-            this.pnReservas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pnReservas.UseCompatibleTextRendering = true;
-            this.pnReservas.UseVisualStyleBackColor = false;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.pnPratos);
-            this.panel5.Location = new System.Drawing.Point(3, 164);
-            this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
-            this.panel5.Size = new System.Drawing.Size(196, 67);
-            this.panel5.TabIndex = 4;
-            // 
-            // pnPratos
-            // 
-            this.pnPratos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.pnPratos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnPratos.ForeColor = System.Drawing.Color.White;
-            this.pnPratos.Image = global::DAProject.Properties.Resources.Meal;
-            this.pnPratos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pnPratos.Location = new System.Drawing.Point(-9, -20);
-            this.pnPratos.Name = "pnPratos";
-            this.pnPratos.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.pnPratos.Size = new System.Drawing.Size(223, 114);
-            this.pnPratos.TabIndex = 2;
-            this.pnPratos.Text = "                      Pratos";
-            this.pnPratos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pnPratos.UseCompatibleTextRendering = true;
-            this.pnPratos.UseVisualStyleBackColor = false;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.pnExtras);
-            this.panel6.Location = new System.Drawing.Point(3, 237);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
-            this.panel6.Size = new System.Drawing.Size(196, 67);
-            this.panel6.TabIndex = 4;
-            // 
-            // pnExtras
-            // 
-            this.pnExtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.pnExtras.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnExtras.ForeColor = System.Drawing.Color.White;
-            this.pnExtras.Image = global::DAProject.Properties.Resources.EXtras;
-            this.pnExtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pnExtras.Location = new System.Drawing.Point(-9, -20);
-            this.pnExtras.Name = "pnExtras";
-            this.pnExtras.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.pnExtras.Size = new System.Drawing.Size(223, 114);
-            this.pnExtras.TabIndex = 2;
-            this.pnExtras.Text = "                      Extras";
-            this.pnExtras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pnExtras.UseCompatibleTextRendering = true;
-            this.pnExtras.UseVisualStyleBackColor = false;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.pnMenus);
-            this.panel7.Location = new System.Drawing.Point(3, 310);
-            this.panel7.Name = "panel7";
-            this.panel7.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
-            this.panel7.Size = new System.Drawing.Size(196, 67);
-            this.panel7.TabIndex = 4;
-            // 
-            // pnMenus
-            // 
-            this.pnMenus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.pnMenus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnMenus.ForeColor = System.Drawing.Color.White;
-            this.pnMenus.Image = global::DAProject.Properties.Resources.Restaurant_Menu;
-            this.pnMenus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pnMenus.Location = new System.Drawing.Point(-9, -20);
-            this.pnMenus.Name = "pnMenus";
-            this.pnMenus.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.pnMenus.Size = new System.Drawing.Size(223, 114);
-            this.pnMenus.TabIndex = 2;
-            this.pnMenus.Text = "                      Menus";
-            this.pnMenus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pnMenus.UseCompatibleTextRendering = true;
-            this.pnMenus.UseVisualStyleBackColor = false;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.pnMultas);
-            this.panel8.Location = new System.Drawing.Point(3, 383);
-            this.panel8.Name = "panel8";
-            this.panel8.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
-            this.panel8.Size = new System.Drawing.Size(196, 67);
-            this.panel8.TabIndex = 4;
-            // 
-            // pnMultas
-            // 
-            this.pnMultas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.pnMultas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnMultas.ForeColor = System.Drawing.Color.White;
-            this.pnMultas.Image = global::DAProject.Properties.Resources.Multas;
-            this.pnMultas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pnMultas.Location = new System.Drawing.Point(-9, -20);
-            this.pnMultas.Name = "pnMultas";
-            this.pnMultas.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.pnMultas.Size = new System.Drawing.Size(223, 114);
-            this.pnMultas.TabIndex = 2;
-            this.pnMultas.Text = "                      Multas";
-            this.pnMultas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pnMultas.UseCompatibleTextRendering = true;
-            this.pnMultas.UseVisualStyleBackColor = false;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.pnClientes);
-            this.panel9.Location = new System.Drawing.Point(3, 456);
-            this.panel9.Name = "panel9";
-            this.panel9.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
-            this.panel9.Size = new System.Drawing.Size(196, 67);
-            this.panel9.TabIndex = 4;
-            // 
-            // pnClientes
-            // 
-            this.pnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.pnClientes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnClientes.ForeColor = System.Drawing.Color.White;
-            this.pnClientes.Image = global::DAProject.Properties.Resources.clients;
-            this.pnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pnClientes.Location = new System.Drawing.Point(-9, -20);
-            this.pnClientes.Name = "pnClientes";
-            this.pnClientes.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.pnClientes.Size = new System.Drawing.Size(223, 114);
-            this.pnClientes.TabIndex = 2;
-            this.pnClientes.Text = "                      Clientes";
-            this.pnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pnClientes.UseCompatibleTextRendering = true;
-            this.pnClientes.UseVisualStyleBackColor = false;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.pnFuncionarios);
-            this.panel10.Location = new System.Drawing.Point(3, 529);
-            this.panel10.Name = "panel10";
-            this.panel10.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
-            this.panel10.Size = new System.Drawing.Size(196, 67);
-            this.panel10.TabIndex = 4;
-            // 
-            // pnFuncionarios
-            // 
-            this.pnFuncionarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.pnFuncionarios.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnFuncionarios.ForeColor = System.Drawing.Color.White;
-            this.pnFuncionarios.Image = global::DAProject.Properties.Resources.Management;
-            this.pnFuncionarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pnFuncionarios.Location = new System.Drawing.Point(-9, -20);
-            this.pnFuncionarios.Name = "pnFuncionarios";
-            this.pnFuncionarios.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.pnFuncionarios.Size = new System.Drawing.Size(223, 114);
-            this.pnFuncionarios.TabIndex = 2;
-            this.pnFuncionarios.Text = "                      Funcionários";
-            this.pnFuncionarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.pnFuncionarios.UseCompatibleTextRendering = true;
-            this.pnFuncionarios.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -398,19 +406,20 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "Página Inicial";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnHeader.ResumeLayout(false);
             this.pnHeader.PerformLayout();
-            this.pnFormControls.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSideBar)).EndInit();
+            this.pnFormControls.ResumeLayout(false);
             this.sideBar.ResumeLayout(false);
             this.pnHome.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
+            this.pnReservas.ResumeLayout(false);
+            this.pnPratos.ResumeLayout(false);
+            this.pnExtras.ResumeLayout(false);
+            this.pnMenus.ResumeLayout(false);
+            this.pnMultas.ResumeLayout(false);
+            this.pnClientes.ResumeLayout(false);
+            this.pnFuncionarios.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -425,23 +434,23 @@
         private System.Windows.Forms.Button buttonMaximize;
         private System.Windows.Forms.Panel pnFormControls;
         private System.Windows.Forms.FlowLayoutPanel sideBar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel pnHome;
         private System.Windows.Forms.Timer sidebarTransition;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button pnReservas;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button pnPratos;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button pnExtras;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button pnMenus;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button pnMultas;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button pnClientes;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button pnFuncionarios;
+        private System.Windows.Forms.Panel pnReservas;
+        private System.Windows.Forms.Button btnReservas;
+        private System.Windows.Forms.Panel pnPratos;
+        private System.Windows.Forms.Button btnPratos;
+        private System.Windows.Forms.Panel pnExtras;
+        private System.Windows.Forms.Button btnExtras;
+        private System.Windows.Forms.Panel pnMenus;
+        private System.Windows.Forms.Button btnMenus;
+        private System.Windows.Forms.Panel pnMultas;
+        private System.Windows.Forms.Button btnMultas;
+        private System.Windows.Forms.Panel pnClientes;
+        private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Panel pnFuncionarios;
+        private System.Windows.Forms.Button btnFuncionarios;
     }
 }
 
