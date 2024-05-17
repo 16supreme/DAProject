@@ -13,9 +13,9 @@ namespace DAProject
         {
             public int id { get; set; }
             public string nome { get; set; }
-            public int nif { get; set; }
+            public int nif { get; set; }    
         }
-        public class Funcionario      : Utilizador
+        public class Funcionario : Utilizador
         {
             public string username;
         }
