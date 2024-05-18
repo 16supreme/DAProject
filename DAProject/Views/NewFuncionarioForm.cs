@@ -27,7 +27,7 @@ namespace DAProject.Views
         {
             using (var db = new CantinaContext())
             {
-                if (siticoneTextBox1 == null || siticoneTextBox2 == null || siticoneTextBox3 == null)
+                if (siticoneTextBox1.TextLength == 0 || siticoneTextBox2.TextLength == 0 || siticoneTextBox3.TextLength == 0)
                 {
                     MessageBox.Show("Preencha todos os campos!");
                 }
