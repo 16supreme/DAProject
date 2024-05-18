@@ -17,6 +17,33 @@ namespace DAProject.Views
             InitializeComponent();
         }
 
-        
+        private void AddCard_Click(object sender, EventArgs e)
+        {
+            Form addCard = new Form();
+            try
+            {
+                using (NewFuncionarioForm newFuncionarioForm = new NewFuncionarioForm())
+                {
+                    addCard.StartPosition = FormStartPosition.Manual;
+                    addCard.FormBorderStyle = FormBorderStyle.None;
+                    addCard.Opacity = .50d;
+                    addCard.BackColor = Color.Black;
+                    addCard.WindowState = FormWindowState.Maximized;
+                    addCard.Location = this.Location;
+                    addCard.ShowInTaskbar = false;
+                    addCard.Show();
+                    newFuncionarioForm.Owner = addCard;
+                    newFuncionarioForm.ShowDialog();
+                    addCard.Dispose();  
+                }
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                addCard.Dispose();
+            }
+        }
     }
 }

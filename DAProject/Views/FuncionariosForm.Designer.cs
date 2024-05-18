@@ -28,27 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialFloatingActionButton1 = new MaterialSkin.Controls.MaterialFloatingActionButton();
-            this.siticoneTextBox1 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.cardFuncionario1 = new DAProject.Views.CardFuncionario();
-            this.cardFuncionario2 = new DAProject.Views.CardFuncionario();
-            this.cardFuncionario3 = new DAProject.Views.CardFuncionario();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.AddCard = new MaterialSkin.Controls.MaterialFloatingActionButton();
+            this.siticoneTextBox1 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.SuspendLayout();
             // 
-            // materialFloatingActionButton1
+            // flowLayoutPanel1
             // 
-            this.materialFloatingActionButton1.Depth = 0;
-            this.materialFloatingActionButton1.Icon = global::DAProject.Properties.Resources.Plus;
-            this.materialFloatingActionButton1.Location = new System.Drawing.Point(12, 401);
-            this.materialFloatingActionButton1.Mini = true;
-            this.materialFloatingActionButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFloatingActionButton1.Name = "materialFloatingActionButton1";
-            this.materialFloatingActionButton1.Size = new System.Drawing.Size(40, 46);
-            this.materialFloatingActionButton1.TabIndex = 0;
-            this.materialFloatingActionButton1.Text = "materialFloatingActionButton1";
-            this.materialFloatingActionButton1.UseVisualStyleBackColor = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 77);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(662, 309);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // AddCard
+            // 
+            this.AddCard.Depth = 0;
+            this.AddCard.Icon = global::DAProject.Properties.Resources.Plus;
+            this.AddCard.Location = new System.Drawing.Point(12, 401);
+            this.AddCard.Mini = true;
+            this.AddCard.MouseState = MaterialSkin.MouseState.HOVER;
+            this.AddCard.Name = "AddCard";
+            this.AddCard.Size = new System.Drawing.Size(40, 46);
+            this.AddCard.TabIndex = 0;
+            this.AddCard.Text = "materialFloatingActionButton1";
+            this.AddCard.UseVisualStyleBackColor = true;
+            this.AddCard.Click += new System.EventHandler(this.AddCard_Click);
             // 
             // siticoneTextBox1
             // 
@@ -69,53 +75,20 @@
             this.siticoneTextBox1.PasswordChar = '\0';
             this.siticoneTextBox1.PlaceholderText = "Pesquisar";
             this.siticoneTextBox1.SelectedText = "";
-            this.siticoneTextBox1.Size = new System.Drawing.Size(200, 36);
+            this.siticoneTextBox1.Size = new System.Drawing.Size(256, 50);
             this.siticoneTextBox1.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Controls.Add(this.cardFuncionario1);
-            this.flowLayoutPanel1.Controls.Add(this.cardFuncionario2);
-            this.flowLayoutPanel1.Controls.Add(this.cardFuncionario3);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 54);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(770, 309);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // cardFuncionario1
-            // 
-            this.cardFuncionario1.Location = new System.Drawing.Point(3, 3);
-            this.cardFuncionario1.Name = "cardFuncionario1";
-            this.cardFuncionario1.Size = new System.Drawing.Size(214, 85);
-            this.cardFuncionario1.TabIndex = 0;
-            // 
-            // cardFuncionario2
-            // 
-            this.cardFuncionario2.Location = new System.Drawing.Point(223, 3);
-            this.cardFuncionario2.Name = "cardFuncionario2";
-            this.cardFuncionario2.Size = new System.Drawing.Size(214, 85);
-            this.cardFuncionario2.TabIndex = 1;
-            // 
-            // cardFuncionario3
-            // 
-            this.cardFuncionario3.Location = new System.Drawing.Point(443, 3);
-            this.cardFuncionario3.Name = "cardFuncionario3";
-            this.cardFuncionario3.Size = new System.Drawing.Size(214, 85);
-            this.cardFuncionario3.TabIndex = 2;
             // 
             // FuncionariosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 562);
-            this.Controls.Add(this.materialFloatingActionButton1);
+            this.Controls.Add(this.AddCard);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.siticoneTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FuncionariosForm";
             this.Text = "FuncionariosForm";
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -123,10 +96,7 @@
         #endregion
 
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox siticoneTextBox1;
-        private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton1;
+        private MaterialSkin.Controls.MaterialFloatingActionButton AddCard;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private CardFuncionario cardFuncionario1;
-        private CardFuncionario cardFuncionario2;
-        private CardFuncionario cardFuncionario3;
     }
 }
