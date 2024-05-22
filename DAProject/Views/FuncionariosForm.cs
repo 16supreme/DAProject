@@ -12,9 +12,11 @@ namespace DAProject.Views
 {
     public partial class FuncionariosForm : Form
     {
+
         public FuncionariosForm()
         {
             InitializeComponent();
+            LoadFuncionarios();
         }
 
         private void AddCard_Click(object sender, EventArgs e)
@@ -43,6 +45,20 @@ namespace DAProject.Views
             finally
             {
                 addCard.Dispose();
+            }
+        }
+
+        private void LoadFuncionarios()
+        {
+            using (var db = new CantinaContext())
+            {
+                var funcionarios = db.Funcionarios.ToList();    
+                foreach(var funcionario in funcionarios)
+                {
+                    CardFuncionario card = new CardFuncionario(funcionario);
+                    flowLayoutPanel1.Controls.Add(card);
+
+                }
             }
         }
     }

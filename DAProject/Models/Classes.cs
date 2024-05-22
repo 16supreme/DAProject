@@ -17,7 +17,7 @@ namespace DAProject
         }
         public class Funcionario : Utilizador
         {
-            public string username;
+            public string username { get; set; }
         }
         public class Cliente : Utilizador
         {

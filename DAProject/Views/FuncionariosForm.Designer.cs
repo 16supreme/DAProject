@@ -37,20 +37,22 @@
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 77);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 95);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(662, 309);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(882, 380);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // AddCard
             // 
             this.AddCard.Depth = 0;
             this.AddCard.Icon = global::DAProject.Properties.Resources.Plus;
-            this.AddCard.Location = new System.Drawing.Point(12, 401);
+            this.AddCard.Location = new System.Drawing.Point(16, 494);
+            this.AddCard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddCard.Mini = true;
             this.AddCard.MouseState = MaterialSkin.MouseState.HOVER;
             this.AddCard.Name = "AddCard";
-            this.AddCard.Size = new System.Drawing.Size(40, 46);
+            this.AddCard.Size = new System.Drawing.Size(43, 45);
             this.AddCard.TabIndex = 0;
             this.AddCard.Text = "materialFloatingActionButton1";
             this.AddCard.UseVisualStyleBackColor = true;
@@ -70,23 +72,25 @@
             this.siticoneTextBox1.ForeColor = System.Drawing.Color.Black;
             this.siticoneTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.siticoneTextBox1.IconLeft = global::DAProject.Properties.Resources.Search;
-            this.siticoneTextBox1.Location = new System.Drawing.Point(12, 12);
+            this.siticoneTextBox1.Location = new System.Drawing.Point(16, 15);
+            this.siticoneTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.siticoneTextBox1.Name = "siticoneTextBox1";
             this.siticoneTextBox1.PasswordChar = '\0';
             this.siticoneTextBox1.PlaceholderText = "Pesquisar";
             this.siticoneTextBox1.SelectedText = "";
-            this.siticoneTextBox1.Size = new System.Drawing.Size(256, 50);
+            this.siticoneTextBox1.Size = new System.Drawing.Size(341, 62);
             this.siticoneTextBox1.TabIndex = 0;
             // 
             // FuncionariosForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.ClientSize = new System.Drawing.Size(1333, 692);
             this.Controls.Add(this.AddCard);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.siticoneTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FuncionariosForm";
             this.Text = "FuncionariosForm";
             this.ResumeLayout(false);
