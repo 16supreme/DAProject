@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.0-preview2-24180-01\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.0-preview2-24180-01\build\EntityFramework.props')" />
   <Import Project="..\packages\Microsoft.EntityFrameworkCore.Design.3.1.32\build\net461\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('..\packages\Microsoft.EntityFrameworkCore.Design.3.1.32\build\net461\Microsoft.EntityFrameworkCore.Design.props')" />
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -38,10 +38,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.5.0-preview2-24180-01\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.5.0-preview2-24180-01\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
@@ -148,11 +148,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Views\CardEstudante.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CardEstudante.Designer.cs">
+      <DependentUpon>CardEstudante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CardFuncionario.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\CardFuncionario.Designer.cs">
       <DependentUpon>CardFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CardPrato.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CardPrato.Designer.cs">
+      <DependentUpon>CardPrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CardProfessor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CardProfessor.Designer.cs">
+      <DependentUpon>CardProfessor.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ExtrasForm.cs">
       <SubType>Form</SubType>
@@ -198,6 +216,12 @@
     <Compile Include="Views\MultasForm.Designer.cs">
       <DependentUpon>MultasForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NewClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NewClienteForm.Designer.cs">
+      <DependentUpon>NewClienteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\NewFuncionarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,8 +245,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CardEstudante.resx">
+      <DependentUpon>CardEstudante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CardFuncionario.resx">
       <DependentUpon>CardFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CardPrato.resx">
+      <DependentUpon>CardPrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CardProfessor.resx">
+      <DependentUpon>CardProfessor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ExtrasForm.resx">
       <DependentUpon>ExtrasForm.cs</DependentUpon>
@@ -244,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MultasForm.resx">
       <DependentUpon>MultasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewClienteForm.resx">
+      <DependentUpon>NewClienteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NewFuncionarioForm.resx">
       <DependentUpon>NewFuncionarioForm.cs</DependentUpon>
@@ -325,14 +361,23 @@
   <ItemGroup>
     <None Include="Resources\Delete User Data.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updateflowlayoutpanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man Teacher.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.EntityFrameworkCore.Design.3.1.32\build\net461\Microsoft.EntityFrameworkCore.Design.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.EntityFrameworkCore.Design.3.1.32\build\net461\Microsoft.EntityFrameworkCore.Design.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.0-preview2-24180-01\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.0-preview2-24180-01\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.0-preview2-24180-01\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.0-preview2-24180-01\build\EntityFramework.targets'))" />
   </Target>
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\EntityFramework.6.5.0-preview2-24180-01\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.0-preview2-24180-01\build\EntityFramework.targets')" />
 </Project>

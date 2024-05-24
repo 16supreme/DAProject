@@ -21,72 +21,72 @@ namespace DAProject
         }
         public class Cliente : Utilizador
         {
-            public float saldo;
+            public double saldo { get; set; }
         }
         public class Estudante : Cliente
         {
-            public int numEstudante;
+            public int numEstudante { get; set; }
         }
         public class Professor : Cliente
         {
-            public string email;
+            public string email { get; set; }
         }
 
         public class Reserva
         {
             public int id { get; set; }
-            public Cliente cliente;
-            public Menu menu;
-            public Prato prato;
-            public List<Extra> extras;
-            public Multa multa;
+            public Cliente cliente { get; set; }
+            public Menu menu { get; set; }
+            public Prato prato { get; set; }
+            public List<Extra> extras { get; set; }
+            public Multa multa { get; set; }
         }
         public class Multa
         {
             public int id { get; set; } 
-            float valor;
-            int numHoras;
+            double valor { get; set; }
+            int numHoras { get; set; }
         }
         public class Menu
         {
             public int id { get; set; } 
-            DateTime dataHora;
-            int qtdDisponivel;
-            float precoEstudante;
-            float precoProfessor;
-            List<Prato> pratos;
-            List<Extra> extras;
+            DateTime dataHora{ get; set; }
+            int qtdDisponivel{ get; set; }
+            double precoEstudante{ get; set; }
+            double precoProfessor{ get; set; }
+            List<Prato> pratos{ get; set; }
+            List<Extra> extras{ get; set; }
         }
         public class Prato
         {
             public int id { get; set; }
-            string descricao;
-            string tipo;
-            bool ativo;
-            List<Menu> menus;
+            string descricao{ get; set; }
+            string tipo{ get; set; }
+            bool ativo{ get; set; }
+            List<Menu> menus{ get; set; }
         }
         public class Extra
         {
             public int id { get; set; }
-            string descricao;
-            float preco;
-            bool ativo;
-            List<Menu> menus;
+            string descricao{ get; set; }
+            double preco{ get; set; }
+            bool ativo{ get; set; }
+            List<Menu> menus{ get; set; }
         }
         public class Fatura
         {
             public int id { get; set; }
-            float total;
-            DateTime dataHora;
-            Cliente cliente;
-            Menu menu;
+            double total{ get; set; }
+            DateTime dataHora{ get; set; }
+            Cliente cliente{ get; set; }
+            Menu menu{ get; set; }
         }
         public class ItemFatura
         {
             public int id { get; set; }
-            string descricao;
-            float preco;
-            Fatura fatura;
+            string descricao{ get; set; }
+            double preco{ get; set; }
+            Fatura fatura{ get; set; }
         }
     }
 }

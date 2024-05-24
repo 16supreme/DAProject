@@ -39,11 +39,22 @@ namespace DAProject.Views
                     }
                     else 
                     {
-                        var funcionario = new Funcionario{ username = siticoneTextBox1.Text,nome = siticoneTextBox2.Text, nif = Convert.ToInt32(siticoneTextBox3.Text)};
-                        db.Utilizadores.Add(funcionario);
-                        db.Funcionarios.Add(funcionario);
-                        db.SaveChanges();
-                        this.Close();
+                        int nif = Convert.ToInt32(siticoneTextBox3.Text);
+                        var checkNIF = db.Utilizadores.FirstOrDefault(User => User.nif == nif);
+
+                        if (checkNIF != null)
+                        {
+                            MessageBox.Show("Já existe um utilizador com este NIF!");
+                        }
+                        else
+                        {
+                            var funcionario = new Funcionario { username = siticoneTextBox1.Text, nome = siticoneTextBox2.Text, nif = Convert.ToInt32(siticoneTextBox3.Text) };
+                            db.Funcionarios.Add(funcionario);
+                            db.Utilizadores.Add(funcionario);
+                            db.SaveChanges();
+                            this.Close();
+                        }
+                        
                     }
                     
                 }

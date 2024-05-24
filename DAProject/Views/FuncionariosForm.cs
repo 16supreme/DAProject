@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAProject.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,16 +51,21 @@ namespace DAProject.Views
 
         private void LoadFuncionarios()
         {
-            using (var db = new CantinaContext())
-            {
-                var funcionarios = db.Funcionarios.ToList();    
-                foreach(var funcionario in funcionarios)
-                {
-                    CardFuncionario card = new CardFuncionario(funcionario);
-                    flowLayoutPanel1.Controls.Add(card);
 
-                }
+            var funcionarios = MainController.GetFuncionarios();
+            Console.WriteLine($"Found {funcionarios.Count} entities.");
+            foreach (var funcionario in funcionarios)
+            {
+                CardFuncionario card = new CardFuncionario(funcionario);
+                flowLayoutPanel1.Controls.Add(card);
             }
+            
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            LoadFuncionarios();
         }
     }
 }

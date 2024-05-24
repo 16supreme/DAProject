@@ -1,4 +1,5 @@
-﻿using DAProject.Views;
+﻿using DAProject.Controllers;
+using DAProject.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,6 +46,7 @@ namespace DAProject
         MultasForm multasForm;
         GestaoClientesForm gestaoClientesForm;
         FuncionariosForm funcionariosForm;
+        //MainController mainController = new MainController();
 
         //<-- Application Form Handling
         public const int WM_NCLBUTTONDOWN = 0xA1;

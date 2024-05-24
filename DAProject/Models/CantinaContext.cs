@@ -11,6 +11,11 @@ namespace DAProject
 {
     public class CantinaContext : DbContext
     {
+
+        public CantinaContext() : base("name=CantinaContext")
+        {
+        }
+
         public DbSet<Utilizador> Utilizadores { get; set; }
         public DbSet<Funcionario> Funcionarios { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
@@ -23,6 +28,8 @@ namespace DAProject
         public DbSet<Extra> Extras { get; set; }
         public DbSet<Fatura> Faturas { get; set; }
         public DbSet<ItemFatura> ItensFatura { get; set; }
+
+
 
     }
 }
