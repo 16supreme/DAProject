@@ -30,13 +30,13 @@
         {
             this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneGroupBox1 = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
+            this.numEstudantetb = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.emailtb = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticoneTextBox3 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticoneTextBox2 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticoneTextBox1 = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.clientTypeCB = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
-            this.numEstudantetb = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.emailtb = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticoneGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +71,48 @@
             this.siticoneGroupBox1.Size = new System.Drawing.Size(307, 230);
             this.siticoneGroupBox1.TabIndex = 4;
             this.siticoneGroupBox1.Text = "Detalhes";
+            // 
+            // numEstudantetb
+            // 
+            this.numEstudantetb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numEstudantetb.DefaultText = "";
+            this.numEstudantetb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.numEstudantetb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.numEstudantetb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.numEstudantetb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.numEstudantetb.Enabled = false;
+            this.numEstudantetb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.numEstudantetb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.numEstudantetb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.numEstudantetb.Location = new System.Drawing.Point(14, 178);
+            this.numEstudantetb.Name = "numEstudantetb";
+            this.numEstudantetb.PasswordChar = '\0';
+            this.numEstudantetb.PlaceholderText = "numEstudante";
+            this.numEstudantetb.SelectedText = "";
+            this.numEstudantetb.Size = new System.Drawing.Size(200, 36);
+            this.numEstudantetb.TabIndex = 6;
+            this.numEstudantetb.Visible = false;
+            // 
+            // emailtb
+            // 
+            this.emailtb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.emailtb.DefaultText = "";
+            this.emailtb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.emailtb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.emailtb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.emailtb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.emailtb.Enabled = false;
+            this.emailtb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.emailtb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.emailtb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.emailtb.Location = new System.Drawing.Point(14, 178);
+            this.emailtb.Name = "emailtb";
+            this.emailtb.PasswordChar = '\0';
+            this.emailtb.PlaceholderText = "email";
+            this.emailtb.SelectedText = "";
+            this.emailtb.Size = new System.Drawing.Size(200, 36);
+            this.emailtb.TabIndex = 7;
+            this.emailtb.Visible = false;
             // 
             // siticoneTextBox3
             // 
@@ -156,48 +198,6 @@
             this.clientTypeCB.TabIndex = 3;
             this.clientTypeCB.SelectedIndexChanged += new System.EventHandler(this.clientTypeCB_SelectedIndexChanged);
             // 
-            // numEstudantetb
-            // 
-            this.numEstudantetb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.numEstudantetb.DefaultText = "";
-            this.numEstudantetb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.numEstudantetb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.numEstudantetb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.numEstudantetb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.numEstudantetb.Enabled = false;
-            this.numEstudantetb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.numEstudantetb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.numEstudantetb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.numEstudantetb.Location = new System.Drawing.Point(14, 178);
-            this.numEstudantetb.Name = "numEstudantetb";
-            this.numEstudantetb.PasswordChar = '\0';
-            this.numEstudantetb.PlaceholderText = "numEstudante";
-            this.numEstudantetb.SelectedText = "";
-            this.numEstudantetb.Size = new System.Drawing.Size(200, 36);
-            this.numEstudantetb.TabIndex = 6;
-            this.numEstudantetb.Visible = false;
-            // 
-            // emailtb
-            // 
-            this.emailtb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.emailtb.DefaultText = "";
-            this.emailtb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.emailtb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.emailtb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.emailtb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.emailtb.Enabled = false;
-            this.emailtb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.emailtb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.emailtb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.emailtb.Location = new System.Drawing.Point(14, 178);
-            this.emailtb.Name = "emailtb";
-            this.emailtb.PasswordChar = '\0';
-            this.emailtb.PlaceholderText = "email";
-            this.emailtb.SelectedText = "";
-            this.emailtb.Size = new System.Drawing.Size(200, 36);
-            this.emailtb.TabIndex = 7;
-            this.emailtb.Visible = false;
-            // 
             // NewClienteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,7 +207,7 @@
             this.Controls.Add(this.siticoneButton1);
             this.Controls.Add(this.siticoneGroupBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NewClienteForm";
             this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.Text = "Insira um novo cliente";

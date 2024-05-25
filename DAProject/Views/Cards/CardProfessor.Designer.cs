@@ -28,38 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblEmail = new MaterialSkin.Controls.MaterialLabel();
             this.lblNome = new MaterialSkin.Controls.MaterialLabel();
             this.lblNif = new MaterialSkin.Controls.MaterialLabel();
             this.lblSaldo = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.atualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deletarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Depth = 0;
-            this.lblEmail.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblEmail.Location = new System.Drawing.Point(109, 88);
+            this.lblEmail.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblEmail.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption;
+            this.lblEmail.Location = new System.Drawing.Point(87, 58);
             this.lblEmail.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(104, 19);
+            this.lblEmail.Size = new System.Drawing.Size(32, 14);
             this.lblEmail.TabIndex = 18;
-            this.lblEmail.Text = "numEstudante";
+            this.lblEmail.Text = "Email";
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Depth = 0;
-            this.lblNome.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.lblNome.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.lblNome.Location = new System.Drawing.Point(109, 3);
+            this.lblNome.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblNome.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
+            this.lblNome.Location = new System.Drawing.Point(87, 3);
             this.lblNome.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(54, 24);
+            this.lblNome.Size = new System.Drawing.Size(39, 17);
             this.lblNome.TabIndex = 15;
             this.lblNome.Text = "Nome";
             // 
@@ -67,11 +73,12 @@
             // 
             this.lblNif.AutoSize = true;
             this.lblNif.Depth = 0;
-            this.lblNif.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblNif.Location = new System.Drawing.Point(109, 58);
+            this.lblNif.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblNif.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption;
+            this.lblNif.Location = new System.Drawing.Point(87, 45);
             this.lblNif.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNif.Name = "lblNif";
-            this.lblNif.Size = new System.Drawing.Size(25, 19);
+            this.lblNif.Size = new System.Drawing.Size(20, 14);
             this.lblNif.TabIndex = 14;
             this.lblNif.Text = "NIF";
             // 
@@ -79,33 +86,59 @@
             // 
             this.lblSaldo.AutoSize = true;
             this.lblSaldo.Depth = 0;
-            this.lblSaldo.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblSaldo.Location = new System.Drawing.Point(109, 39);
+            this.lblSaldo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblSaldo.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption;
+            this.lblSaldo.Location = new System.Drawing.Point(87, 31);
             this.lblSaldo.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblSaldo.Name = "lblSaldo";
-            this.lblSaldo.Size = new System.Drawing.Size(42, 19);
+            this.lblSaldo.Size = new System.Drawing.Size(32, 14);
             this.lblSaldo.TabIndex = 13;
             this.lblSaldo.Text = "Saldo";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DAProject.Properties.Resources.More;
-            this.pictureBox2.Location = new System.Drawing.Point(284, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(235, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(23, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DAProject.Properties.Resources.Man_Teacher;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 104);
+            this.pictureBox1.Size = new System.Drawing.Size(78, 74);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.atualizarToolStripMenuItem,
+            this.deletarToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 78);
+            // 
+            // atualizarToolStripMenuItem
+            // 
+            this.atualizarToolStripMenuItem.Image = global::DAProject.Properties.Resources.Edit;
+            this.atualizarToolStripMenuItem.Name = "atualizarToolStripMenuItem";
+            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.atualizarToolStripMenuItem.Text = "Editar";
+            this.atualizarToolStripMenuItem.Click += new System.EventHandler(this.atualizarToolStripMenuItem_Click);
+            // 
+            // deletarToolStripMenuItem
+            // 
+            this.deletarToolStripMenuItem.Image = global::DAProject.Properties.Resources.Delete_User_Data;
+            this.deletarToolStripMenuItem.Name = "deletarToolStripMenuItem";
+            this.deletarToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.deletarToolStripMenuItem.Text = "Deletar";
             // 
             // CardProfessor
             // 
@@ -118,9 +151,10 @@
             this.Controls.Add(this.lblSaldo);
             this.Controls.Add(this.pictureBox1);
             this.Name = "CardProfessor";
-            this.Size = new System.Drawing.Size(310, 110);
+            this.Size = new System.Drawing.Size(261, 83);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,5 +168,8 @@
         private MaterialSkin.Controls.MaterialLabel lblNif;
         private MaterialSkin.Controls.MaterialLabel lblSaldo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem atualizarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deletarToolStripMenuItem;
     }
 }

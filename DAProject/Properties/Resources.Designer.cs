@@ -153,6 +153,16 @@ namespace DAProject.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Man_Student {
+            get {
+                object obj = ResourceManager.GetObject("Man Student", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Man_Teacher {
             get {
                 object obj = ResourceManager.GetObject("Man Teacher", resourceCulture);

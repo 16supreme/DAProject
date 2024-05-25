@@ -39,7 +39,7 @@ namespace DAProject.Views
                 numEstudantetb.Visible = true;
                 emailtb.Enabled = false;
                 emailtb.Visible = false;
-                pictureBox1.Image = Resources.client;
+                pictureBox1.Image = Resources.Man_Student;
             }
             else
             {

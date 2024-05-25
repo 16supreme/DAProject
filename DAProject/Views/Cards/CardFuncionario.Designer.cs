@@ -1,4 +1,6 @@
-﻿namespace DAProject.Views
+﻿using System;
+
+namespace DAProject.Views
 {
     partial class CardFuncionario
     {
@@ -47,8 +49,7 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Depth = 0;
             this.lblNome.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblNome.Location = new System.Drawing.Point(121, 48);
-            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNome.Location = new System.Drawing.Point(91, 39);
             this.lblNome.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(43, 19);
@@ -60,8 +61,7 @@
             this.lblNif.AutoSize = true;
             this.lblNif.Depth = 0;
             this.lblNif.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblNif.Location = new System.Drawing.Point(123, 71);
-            this.lblNif.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNif.Location = new System.Drawing.Point(92, 58);
             this.lblNif.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNif.Name = "lblNif";
             this.lblNif.Size = new System.Drawing.Size(25, 19);
@@ -74,8 +74,7 @@
             this.lblUsername.Depth = 0;
             this.lblUsername.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lblUsername.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.lblUsername.Location = new System.Drawing.Point(121, 4);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsername.Location = new System.Drawing.Point(91, 3);
             this.lblUsername.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(92, 24);
@@ -89,56 +88,56 @@
             this.atualizarToolStripMenuItem,
             this.deletarToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(132, 56);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 78);
             // 
             // atualizarToolStripMenuItem
             // 
             this.atualizarToolStripMenuItem.Image = global::DAProject.Properties.Resources.Edit;
             this.atualizarToolStripMenuItem.Name = "atualizarToolStripMenuItem";
-            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
+            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.atualizarToolStripMenuItem.Text = "Editar";
+            this.atualizarToolStripMenuItem.Click += new System.EventHandler(this.atualizarToolStripMenuItem_Click);
             // 
             // deletarToolStripMenuItem
             // 
             this.deletarToolStripMenuItem.Image = global::DAProject.Properties.Resources.Delete_User_Data;
             this.deletarToolStripMenuItem.Name = "deletarToolStripMenuItem";
-            this.deletarToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
+            this.deletarToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.deletarToolStripMenuItem.Text = "Deletar";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DAProject.Properties.Resources.More;
-            this.pictureBox2.Location = new System.Drawing.Point(277, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(208, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(23, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DAProject.Properties.Resources.Func;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 97);
+            this.pictureBox1.Size = new System.Drawing.Size(82, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // CardFuncionario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblNif);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CardFuncionario";
-            this.Size = new System.Drawing.Size(312, 105);
+            this.Size = new System.Drawing.Size(234, 85);
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -157,5 +156,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem atualizarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deletarToolStripMenuItem;
+
     }
 }
