@@ -41,7 +41,7 @@
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 65);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(724, 352);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(801, 352);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // updateBtn
@@ -51,7 +51,7 @@
             this.updateBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.updateBtn.FlatAppearance.BorderSize = 0;
             this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateBtn.Location = new System.Drawing.Point(693, 423);
+            this.updateBtn.Location = new System.Drawing.Point(773, 423);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(30, 30);
             this.updateBtn.TabIndex = 5;
@@ -98,7 +98,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 486);
+            this.ClientSize = new System.Drawing.Size(834, 486);
             this.Controls.Add(this.siticoneTextBox1);
             this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.addCard);

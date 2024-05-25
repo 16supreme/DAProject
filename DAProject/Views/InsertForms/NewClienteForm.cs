@@ -78,21 +78,32 @@ namespace DAProject.Views
                         {
                             if(comboValue == 0)
                             {
-                                var estudante = new Estudante { nome = siticoneTextBox1.Text, saldo = Convert.ToDouble(siticoneTextBox2.Text), nif = Convert.ToInt32(siticoneTextBox3.Text),numEstudante = Convert.ToInt32(numEstudantetb.Text) };
-                                db.Estudantes.Add(estudante);
-                                db.Clientes.Add(estudante);
-                                db.Utilizadores.Add(estudante);
-                                db.SaveChanges();
-                                this.Close();
+                                if(numEstudantetb.Text.Length == 7) 
+                                {
+                                    var estudante = new Estudante { nome = siticoneTextBox1.Text, saldo = Convert.ToDouble(siticoneTextBox2.Text), nif = Convert.ToInt32(siticoneTextBox3.Text), numEstudante = Convert.ToInt32(numEstudantetb.Text) };
+                                    db.Utilizadores.Add(estudante);
+                                    db.SaveChanges();
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("O número de estudante deve conter 7 dígitos!");
+                                }
                             }
                             else
                             {
-                                var professor = new Professor { nome = siticoneTextBox1.Text, saldo = Convert.ToDouble(siticoneTextBox2.Text), nif = Convert.ToInt32(siticoneTextBox3.Text),email = emailtb.Text };
-                                db.Professores.Add(professor);
-                                db.Clientes.Add(professor);
-                                db.Utilizadores.Add(professor);
-                                db.SaveChanges();
-                                this.Close();
+                                if (emailtb.Text.Contains("@"))
+                                {
+                                    var professor = new Professor { nome = siticoneTextBox1.Text, saldo = Convert.ToDouble(siticoneTextBox2.Text), nif = Convert.ToInt32(siticoneTextBox3.Text), email = emailtb.Text };
+                                    db.Utilizadores.Add(professor);
+                                    db.SaveChanges();
+                                    this.Close();
+                                }
+                                else 
+                                {
+                                    MessageBox.Show("Formato de email errado (@)!");
+                                }
+                                
                             }
                             
                         }

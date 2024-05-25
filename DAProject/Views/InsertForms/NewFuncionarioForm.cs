@@ -49,7 +49,6 @@ namespace DAProject.Views
                         else
                         {
                             var funcionario = new Funcionario { username = siticoneTextBox1.Text, nome = siticoneTextBox2.Text, nif = Convert.ToInt32(siticoneTextBox3.Text) };
-                            db.Funcionarios.Add(funcionario);
                             db.Utilizadores.Add(funcionario);
                             db.SaveChanges();
                             this.Close();

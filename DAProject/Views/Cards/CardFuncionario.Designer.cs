@@ -104,6 +104,7 @@ namespace DAProject.Views
             this.deletarToolStripMenuItem.Name = "deletarToolStripMenuItem";
             this.deletarToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.deletarToolStripMenuItem.Text = "Deletar";
+            this.deletarToolStripMenuItem.Click += new System.EventHandler(this.deletarToolStripMenuItem_Click);
             // 
             // pictureBox2
             // 

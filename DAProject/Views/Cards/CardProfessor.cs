@@ -65,5 +65,25 @@ namespace DAProject.Views
                 addCard.Dispose();
             }
         }
+
+        private void deletarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if((MessageBox.Show("Deseja mesmo deletar este cliente?","Deletar", MessageBoxButtons.YesNo) == DialogResult.Yes)){
+                using (var db = new CantinaContext())
+                {
+                    var deleteProfessor = db.Clientes.Find(getCliente.id);
+
+                    if(deleteProfessor != null)
+                    {
+                        db.Clientes.Remove(deleteProfessor);
+                        db.SaveChanges();
+                    }
+                    else 
+                    {
+                        MessageBox.Show("Este professor não existe!");
+                    }
+                }
+            }
+        }
     }
 }
