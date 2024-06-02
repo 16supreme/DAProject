@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DAProject.Controllers;
+using DAProject.Views.Cards;
+using DAProject.Views.InsertForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +18,54 @@ namespace DAProject.Views
         public MultasForm()
         {
             InitializeComponent();
+            LoadMultas();
+        }
+
+        private void LoadMultas()
+        {
+            var multas = MainController.GetMultas();
+            Console.WriteLine($"Found {multas.Count} entities.");
+            foreach (var multa in multas)
+            {
+                CardMulta card = new CardMulta(multa);
+                flowLayoutPanel1.Controls.Add(card);
+            }
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            LoadMultas();
+        }
+
+        private void addCard_Click(object sender, EventArgs e)
+        {
+            Form addCard = new Form();
+            try
+            {
+                using (NewMultaForm newMultaForm= new NewMultaForm())
+                {
+                    addCard.StartPosition = FormStartPosition.Manual;
+                    addCard.FormBorderStyle = FormBorderStyle.None;
+                    addCard.Opacity = .50d;
+                    addCard.BackColor = Color.Black;
+                    addCard.WindowState = FormWindowState.Maximized;
+                    addCard.Location = this.Location;
+                    addCard.ShowInTaskbar = false;
+                    addCard.Show();
+                    newMultaForm.Owner = addCard;
+                    newMultaForm.ShowDialog();
+                    addCard.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                addCard.Dispose();
+            }
         }
     }
 }

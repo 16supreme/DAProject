@@ -10,23 +10,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DAProject.Views
+namespace DAProject.Views.Cards
 {
-    public partial class CardPrato : UserControl
+    public partial class CardExtra : UserControl
     {
-        private Classes.Prato getPrato;
-        public CardPrato(Classes.Prato prato)
+        private Classes.Extra getExtra;
+        public CardExtra(Classes.Extra extra)
         {
             InitializeComponent();
-            LoadData(prato);
+            LoadData(extra);
         }
 
-        private void LoadData(Classes.Prato prato)
+        private void LoadData(Classes.Extra extra)
         {
-            getPrato = prato;
-            lblDescricao.Text = prato.descricao;
-            lblTipo.Text = prato.tipo;
-            if (prato.ativo) 
+            getExtra = extra;
+            lblDescricao.Text = extra.descricao;
+            lblPreco.Text = Convert.ToString(extra.preco) + "€";
+            if (extra.ativo)
             {
                 lblAtivo.Text = "Disponível";
             }
@@ -46,7 +46,7 @@ namespace DAProject.Views
             Form addCard = new Form();
             try
             {
-                using (UpdatePratoForm updatePratoForm = new UpdatePratoForm(getPrato))
+                using (UpdateExtraForm updateExtraForm = new UpdateExtraForm(getExtra))
                 {
                     addCard.StartPosition = FormStartPosition.Manual;
                     addCard.FormBorderStyle = FormBorderStyle.None;
@@ -56,8 +56,8 @@ namespace DAProject.Views
                     addCard.Location = this.Location;
                     addCard.ShowInTaskbar = false;
                     addCard.Show();
-                    updatePratoForm.Owner = addCard;
-                    updatePratoForm.ShowDialog();
+                    updateExtraForm.Owner = addCard;
+                    updateExtraForm.ShowDialog();
                     addCard.Dispose();
                 }
             }
@@ -73,28 +73,23 @@ namespace DAProject.Views
 
         private void deletarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if ((MessageBox.Show("Deseja mesmo deletar este prato?", "Deletar", MessageBoxButtons.YesNo) == DialogResult.Yes))
+            if ((MessageBox.Show("Deseja mesmo deletar este extra?", "Deletar", MessageBoxButtons.YesNo) == DialogResult.Yes))
             {
                 using (var db = new CantinaContext())
                 {
-                    var deletePrato = db.Pratos.Find(getPrato.id);
+                    var deleteExtra = db.Extras.Find(getExtra.id);
 
-                    if (deletePrato != null)
+                    if (deleteExtra != null)
                     {
-                        db.Pratos.Remove(deletePrato);
+                        db.Extras.Remove(deleteExtra);
                         db.SaveChanges();
                     }
                     else
                     {
-                        MessageBox.Show("Este prato não existe!");
+                        MessageBox.Show("Este extra não existe!");
                     }
                 }
             }
-        }
-
-        public void SetPictureBoxImage(Image image)
-        {
-            pictureBox1.Image = image;
         }
     }
 }

@@ -43,50 +43,50 @@ namespace DAProject
         }
         public class Multa
         {
-            public int id { get; set; } 
-            double valor { get; set; }
-            int numHoras { get; set; }
+            public int id { get; set; }
+            public double valor { get; set; }
+            public int numHoras { get; set; }
         }
         public class Menu
         {
-            public int id { get; set; } 
-            DateTime dataHora{ get; set; }
-            int qtdDisponivel{ get; set; }
-            double precoEstudante{ get; set; }
-            double precoProfessor{ get; set; }
-            List<Prato> pratos{ get; set; }
-            List<Extra> extras{ get; set; }
+            public int id { get; set; }
+            public DateTime dataHora { get; set; }
+            public int qtdDisponivel { get; set; }
+            public double precoEstudante { get; set; }
+            public double precoProfessor{ get; set; }
+            public List<Prato> pratos{ get; set; }
+            public List<Extra> extras{ get; set; }
         }
         public class Prato
         {
             public int id { get; set; }
-            string descricao{ get; set; }
-            string tipo{ get; set; }
-            bool ativo{ get; set; }
-            List<Menu> menus{ get; set; }
+            public string descricao{ get; set; }
+            public string tipo { get; set; }
+            public bool ativo { get; set; }
+            public List<Menu> menus{ get; set; }
         }
         public class Extra
         {
             public int id { get; set; }
-            string descricao{ get; set; }
-            double preco{ get; set; }
-            bool ativo{ get; set; }
-            List<Menu> menus{ get; set; }
+            public string descricao{ get; set; }
+            public double preco{ get; set; }
+            public bool ativo{ get; set; }
+            public List<Menu> menus{ get; set; }
         }
         public class Fatura
         {
             public int id { get; set; }
-            double total{ get; set; }
-            DateTime dataHora{ get; set; }
-            Cliente cliente{ get; set; }
-            Menu menu{ get; set; }
+            public double total{ get; set; }
+            public DateTime dataHora{ get; set; }
+            public Cliente cliente{ get; set; }
+            public Menu menu{ get; set; }
         }
         public class ItemFatura
         {
             public int id { get; set; }
-            string descricao{ get; set; }
-            double preco{ get; set; }
-            Fatura fatura{ get; set; }
+            public string descricao{ get; set; }
+            public double preco{ get; set; }
+            public Fatura fatura{ get; set; }
         }
     }
 }

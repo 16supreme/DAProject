@@ -12,22 +12,7 @@ namespace DAProject.Controllers
     public class MainController
     {
         public MainController() { }
-        public void FormTransition<T>(ref Form form,MainForm mainform, FormClosedEventHandler form_FormClosed)
-        {
-                if (form == null)
-                {
-                Console.WriteLine(Convert.ToString(form), mainform, form_FormClosed);
-                    form = new Form();
-                    form.FormClosed += form_FormClosed;
-                    form.MdiParent = mainform;
-                    form.Dock = DockStyle.Fill;
-                    form.Show();
-                }
-                else
-                {
-                    form.Activate();
-                }
-            }
+
         public static List<Funcionario> GetFuncionarios()
         {
             using (var db = new CantinaContext())
@@ -65,6 +50,30 @@ namespace DAProject.Controllers
             using (var db = new CantinaContext())
             {
                 return db.Extras.ToList();
+            }
+        }
+
+        public static List<Multa> GetMultas()
+        {
+            using (var db = new CantinaContext())
+            {
+                return db.Multas.ToList();
+            }
+        }
+
+        public static List<Classes.Menu> GetMenus()
+        {
+            using (var db = new CantinaContext())
+            {
+                return db.Menus.ToList();
+            }
+        }
+
+        public static List<Reserva> GetReservas()
+        {
+            using (var db = new CantinaContext())
+            {
+                return db.Reservas.ToList();
             }
         }
     }        

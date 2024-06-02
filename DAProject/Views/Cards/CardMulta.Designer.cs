@@ -1,6 +1,6 @@
-﻿namespace DAProject.Views
+﻿namespace DAProject.Views.Cards
 {
-    partial class CardPrato
+    partial class CardMulta
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lblDescricao = new MaterialSkin.Controls.MaterialLabel();
-            this.lblAtivo = new MaterialSkin.Controls.MaterialLabel();
-            this.lblTipo = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblID = new MaterialSkin.Controls.MaterialLabel();
+            this.lblHoras = new MaterialSkin.Controls.MaterialLabel();
+            this.lblValor = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.atualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,64 +42,62 @@
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblDescricao
-            // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Depth = 0;
-            this.lblDescricao.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.lblDescricao.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
-            this.lblDescricao.Location = new System.Drawing.Point(91, 10);
-            this.lblDescricao.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(64, 17);
-            this.lblDescricao.TabIndex = 13;
-            this.lblDescricao.Text = "Descrição";
-            // 
-            // lblAtivo
-            // 
-            this.lblAtivo.AutoSize = true;
-            this.lblAtivo.Depth = 0;
-            this.lblAtivo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblAtivo.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption;
-            this.lblAtivo.Location = new System.Drawing.Point(92, 58);
-            this.lblAtivo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblAtivo.Name = "lblAtivo";
-            this.lblAtivo.Size = new System.Drawing.Size(29, 14);
-            this.lblAtivo.TabIndex = 12;
-            this.lblAtivo.Text = "Ativo";
-            // 
-            // lblTipo
-            // 
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.Depth = 0;
-            this.lblTipo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblTipo.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption;
-            this.lblTipo.Location = new System.Drawing.Point(91, 44);
-            this.lblTipo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(25, 14);
-            this.lblTipo.TabIndex = 11;
-            this.lblTipo.Text = "Tipo";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DAProject.Properties.Resources.More;
-            this.pictureBox2.Location = new System.Drawing.Point(275, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(208, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(23, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Depth = 0;
+            this.lblID.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lblID.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.lblID.Location = new System.Drawing.Point(91, 3);
+            this.lblID.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(20, 24);
+            this.lblID.TabIndex = 8;
+            this.lblID.Text = "ID";
+            // 
+            // lblHoras
+            // 
+            this.lblHoras.AutoSize = true;
+            this.lblHoras.Depth = 0;
+            this.lblHoras.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblHoras.Location = new System.Drawing.Point(92, 58);
+            this.lblHoras.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblHoras.Name = "lblHoras";
+            this.lblHoras.Size = new System.Drawing.Size(43, 19);
+            this.lblHoras.TabIndex = 7;
+            this.lblHoras.Text = "Horas";
+            // 
+            // lblValor
+            // 
+            this.lblValor.AutoSize = true;
+            this.lblValor.Depth = 0;
+            this.lblValor.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblValor.Location = new System.Drawing.Point(91, 39);
+            this.lblValor.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(38, 19);
+            this.lblValor.TabIndex = 6;
+            this.lblValor.Text = "Valor";
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::DAProject.Properties.Resources.Meal_Isometric;
+            this.pictureBox1.Image = global::DAProject.Properties.Resources.fines;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(82, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // contextMenuStrip1
@@ -115,7 +113,7 @@
             // 
             this.atualizarToolStripMenuItem.Image = global::DAProject.Properties.Resources.Edit;
             this.atualizarToolStripMenuItem.Name = "atualizarToolStripMenuItem";
-            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(115, 26);
+            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.atualizarToolStripMenuItem.Text = "Editar";
             this.atualizarToolStripMenuItem.Click += new System.EventHandler(this.atualizarToolStripMenuItem_Click);
             // 
@@ -123,21 +121,21 @@
             // 
             this.deletarToolStripMenuItem.Image = global::DAProject.Properties.Resources.Delete_User_Data;
             this.deletarToolStripMenuItem.Name = "deletarToolStripMenuItem";
-            this.deletarToolStripMenuItem.Size = new System.Drawing.Size(115, 26);
+            this.deletarToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.deletarToolStripMenuItem.Text = "Deletar";
             this.deletarToolStripMenuItem.Click += new System.EventHandler(this.deletarToolStripMenuItem_Click);
             // 
-            // CardPrato
+            // CardMulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.lblDescricao);
-            this.Controls.Add(this.lblAtivo);
-            this.Controls.Add(this.lblTipo);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.lblHoras);
+            this.Controls.Add(this.lblValor);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "CardPrato";
-            this.Size = new System.Drawing.Size(301, 83);
+            this.Name = "CardMulta";
+            this.Size = new System.Drawing.Size(234, 85);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -149,9 +147,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox2;
-        private MaterialSkin.Controls.MaterialLabel lblDescricao;
-        private MaterialSkin.Controls.MaterialLabel lblAtivo;
-        private MaterialSkin.Controls.MaterialLabel lblTipo;
+        private MaterialSkin.Controls.MaterialLabel lblID;
+        private MaterialSkin.Controls.MaterialLabel lblHoras;
+        private MaterialSkin.Controls.MaterialLabel lblValor;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem atualizarToolStripMenuItem;

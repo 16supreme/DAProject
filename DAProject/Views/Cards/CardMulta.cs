@@ -9,31 +9,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DAProject.Classes;
 
-namespace DAProject.Views
+namespace DAProject.Views.Cards
 {
-    public partial class CardPrato : UserControl
+    public partial class CardMulta : UserControl
     {
-        private Classes.Prato getPrato;
-        public CardPrato(Classes.Prato prato)
+        private Classes.Multa getMulta;
+        public CardMulta(Classes.Multa multa)
         {
             InitializeComponent();
-            LoadData(prato);
+            LoadData(multa);
         }
 
-        private void LoadData(Classes.Prato prato)
+        private void LoadData(Classes.Multa multa)
         {
-            getPrato = prato;
-            lblDescricao.Text = prato.descricao;
-            lblTipo.Text = prato.tipo;
-            if (prato.ativo) 
-            {
-                lblAtivo.Text = "Disponível";
-            }
-            else
-            {
-                lblAtivo.Text = "Indisponível";
-            }
+            getMulta = multa;
+            lblID.Text = "Multa " + Convert.ToString(multa.id);
+            lblValor.Text = Convert.ToString(multa.valor) + "€";
+            lblHoras.Text = Convert.ToString(multa.numHoras) + "h";
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -46,7 +40,7 @@ namespace DAProject.Views
             Form addCard = new Form();
             try
             {
-                using (UpdatePratoForm updatePratoForm = new UpdatePratoForm(getPrato))
+                using (UpdateMultaForm updateMultaForm = new UpdateMultaForm(getMulta))
                 {
                     addCard.StartPosition = FormStartPosition.Manual;
                     addCard.FormBorderStyle = FormBorderStyle.None;
@@ -56,8 +50,8 @@ namespace DAProject.Views
                     addCard.Location = this.Location;
                     addCard.ShowInTaskbar = false;
                     addCard.Show();
-                    updatePratoForm.Owner = addCard;
-                    updatePratoForm.ShowDialog();
+                    updateMultaForm.Owner = addCard;
+                    updateMultaForm.ShowDialog();
                     addCard.Dispose();
                 }
             }
@@ -73,28 +67,23 @@ namespace DAProject.Views
 
         private void deletarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if ((MessageBox.Show("Deseja mesmo deletar este prato?", "Deletar", MessageBoxButtons.YesNo) == DialogResult.Yes))
+            if ((MessageBox.Show("Deseja mesmo deletar esta multa?", "Deletar", MessageBoxButtons.YesNo) == DialogResult.Yes))
             {
                 using (var db = new CantinaContext())
                 {
-                    var deletePrato = db.Pratos.Find(getPrato.id);
+                    var deleteMulta = db.Multas.Find(getMulta.id);
 
-                    if (deletePrato != null)
+                    if (deleteMulta != null)
                     {
-                        db.Pratos.Remove(deletePrato);
+                        db.Multas.Remove(deleteMulta);
                         db.SaveChanges();
                     }
                     else
                     {
-                        MessageBox.Show("Este prato não existe!");
+                        MessageBox.Show("Esta multa não existe!");
                     }
                 }
             }
-        }
-
-        public void SetPictureBoxImage(Image image)
-        {
-            pictureBox1.Image = image;
         }
     }
 }
