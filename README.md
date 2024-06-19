@@ -1,4 +1,4 @@
-# Projeto DA iCantina
+# Projeto DA-MDS iCantina
 ---
 
 Diogo Ruivo
@@ -18,6 +18,6 @@ Para o correto funcionamento da aplicação é apenas necessario extrair e compi
 
 ***
 
-> Desenvolvimento de Aplicações @ 2024
+> Desenvolvimento de Aplicações - Metodologias de Desenvolvimento de Software @ 2024
 
 ![Logo](https://eduportugal.eu/wp-content/uploads/2017/08/eduportugal_ipleiria_n.jpg)
