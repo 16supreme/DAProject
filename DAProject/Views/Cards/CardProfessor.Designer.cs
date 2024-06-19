@@ -38,6 +38,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.atualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deletarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carregarSaldoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -121,9 +122,10 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.atualizarToolStripMenuItem,
-            this.deletarToolStripMenuItem});
+            this.deletarToolStripMenuItem,
+            this.carregarSaldoToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 78);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 104);
             // 
             // atualizarToolStripMenuItem
             // 
@@ -140,6 +142,14 @@
             this.deletarToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.deletarToolStripMenuItem.Text = "Deletar";
             this.deletarToolStripMenuItem.Click += new System.EventHandler(this.deletarToolStripMenuItem_Click);
+            // 
+            // carregarSaldoToolStripMenuItem
+            // 
+            this.carregarSaldoToolStripMenuItem.Image = global::DAProject.Properties.Resources.Money_Bag;
+            this.carregarSaldoToolStripMenuItem.Name = "carregarSaldoToolStripMenuItem";
+            this.carregarSaldoToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.carregarSaldoToolStripMenuItem.Text = "Carregar Saldo";
+            this.carregarSaldoToolStripMenuItem.Click += new System.EventHandler(this.carregarSaldoToolStripMenuItem_Click);
             // 
             // CardProfessor
             // 
@@ -172,5 +182,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem atualizarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deletarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem carregarSaldoToolStripMenuItem;
     }
 }

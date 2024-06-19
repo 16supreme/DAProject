@@ -36,6 +36,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 66);
@@ -88,10 +89,11 @@
             this.siticoneTextBox1.Location = new System.Drawing.Point(12, 9);
             this.siticoneTextBox1.Name = "siticoneTextBox1";
             this.siticoneTextBox1.PasswordChar = '\0';
-            this.siticoneTextBox1.PlaceholderText = "Pesquisar";
+            this.siticoneTextBox1.PlaceholderText = "Pesquisar (Descrição)";
             this.siticoneTextBox1.SelectedText = "";
             this.siticoneTextBox1.Size = new System.Drawing.Size(253, 51);
             this.siticoneTextBox1.TabIndex = 3;
+            this.siticoneTextBox1.TextChanged += new System.EventHandler(this.siticoneTextBox1_TextChanged);
             // 
             // PratosForm
             // 

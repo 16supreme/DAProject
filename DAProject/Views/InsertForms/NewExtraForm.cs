@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity.Infrastructure;
 using System.Windows.Forms;
 using static DAProject.Classes;
 
@@ -31,7 +32,7 @@ namespace DAProject.Views.InsertForms
         {
             using (var db = new CantinaContext())
             {
-                if (siticoneTextBox1.TextLength == 0 || siticoneTextBox2.Text.Length == 0 || siticoneComboBox1.SelectedItem == null)
+                if (siticoneTextBox1.TextLength == 0 || siticoneTextBox2.TextLength == 0 || siticoneComboBox1.SelectedItem == null)
                 {
                     MessageBox.Show("Preencha todos os campos!");
                 }

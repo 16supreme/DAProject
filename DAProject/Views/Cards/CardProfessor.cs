@@ -85,5 +85,35 @@ namespace DAProject.Views
                 }
             }
         }
+
+        private void carregarSaldoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form addCard = new Form();
+            try
+            {
+                using (UpdateClienteSaldo updateClienteSaldo = new UpdateClienteSaldo(getCliente))
+                {
+                    addCard.StartPosition = FormStartPosition.Manual;
+                    addCard.FormBorderStyle = FormBorderStyle.None;
+                    addCard.Opacity = .50d;
+                    addCard.BackColor = Color.Black;
+                    addCard.WindowState = FormWindowState.Maximized;
+                    addCard.Location = this.Location;
+                    addCard.ShowInTaskbar = false;
+                    addCard.Show();
+                    updateClienteSaldo.Owner = addCard;
+                    updateClienteSaldo.ShowDialog();
+                    addCard.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                addCard.Dispose();
+            }
+        }
     }
 }

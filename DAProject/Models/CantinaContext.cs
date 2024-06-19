@@ -30,6 +30,5 @@ namespace DAProject
         public DbSet<ItemFatura> ItensFatura { get; set; }
 
 
-
     }
 }

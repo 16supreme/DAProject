@@ -25,7 +25,7 @@ namespace DAProject
         {
             if (HomeForm == null)
             {
-                HomeForm = new HomeForm();
+                HomeForm = new HomeForm(this);
                 HomeForm.FormClosed += HomeForm_FormClosed;
                 HomeForm.MdiParent = this;
                 HomeForm.Dock = DockStyle.Fill;
@@ -120,7 +120,7 @@ namespace DAProject
         {
             if(HomeForm == null)
             {
-                HomeForm = new HomeForm();
+                HomeForm = new HomeForm(this);
                 HomeForm.FormClosed += HomeForm_FormClosed;
                 HomeForm.MdiParent = this;
                 HomeForm.Dock = DockStyle.Fill;

@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DAProject.Classes;
 
 namespace DAProject
 {
@@ -18,10 +19,16 @@ namespace DAProject
         public class Funcionario : Utilizador
         {
             public string username { get; set; }
+
+            public override string ToString()
+            {
+                return username;
+            }
         }
         public class Cliente : Utilizador
         {
             public double saldo { get; set; }
+            public List<Fatura> faturas { get; set; }
         }
         public class Estudante : Cliente
         {
@@ -40,6 +47,8 @@ namespace DAProject
             public Prato prato { get; set; }
             public List<Extra> extras { get; set; }
             public Multa multa { get; set; }
+
+            public bool used { get; set; }
         }
         public class Multa
         {
@@ -56,6 +65,16 @@ namespace DAProject
             public double precoProfessor{ get; set; }
             public List<Prato> pratos{ get; set; }
             public List<Extra> extras{ get; set; }
+
+            public List<Reserva> reservas{ get; set; }
+
+            public List<Fatura> faturas { get; set; }
+
+            public Menu()
+            {
+                pratos = new List<Prato>();
+                extras = new List<Extra>();
+            }
         }
         public class Prato
         {
@@ -64,6 +83,11 @@ namespace DAProject
             public string tipo { get; set; }
             public bool ativo { get; set; }
             public List<Menu> menus{ get; set; }
+
+            public override string ToString()
+            {
+                return descricao;
+            }
         }
         public class Extra
         {
@@ -72,6 +96,12 @@ namespace DAProject
             public double preco{ get; set; }
             public bool ativo{ get; set; }
             public List<Menu> menus{ get; set; }
+            public List<Reserva> reservas { get; set; }
+
+            public override string ToString()
+            {
+                return descricao;
+            }
         }
         public class Fatura
         {

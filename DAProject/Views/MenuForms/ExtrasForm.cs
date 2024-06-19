@@ -21,9 +21,12 @@ namespace DAProject.Views
             LoadExtras();
         }
 
-        private void LoadExtras()
+        private void LoadExtras(string nameSearch = "")
         {
-            var extras = MainController.GetExtras();
+            flowLayoutPanel1.Controls.Clear();
+            nameSearch = nameSearch.ToLower();
+
+            var extras = MainController.GetExtras().Where(e => e.descricao.ToLower().Contains(nameSearch)).ToList();
             Console.WriteLine($"Found {extras.Count} entities.");
             foreach (var extra in extras)
             {
@@ -64,8 +67,14 @@ namespace DAProject.Views
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Controls.Clear();
-            LoadExtras();
+            string nameSearch = siticoneTextBox1.Text;
+            LoadExtras(nameSearch);
+        }
+
+        private void siticoneTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            string nameSearch = siticoneTextBox1.Text;
+            LoadExtras(nameSearch);
         }
     }
 }

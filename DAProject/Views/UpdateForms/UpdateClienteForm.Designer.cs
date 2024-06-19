@@ -33,7 +33,6 @@
             this.numEstudantetb = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.emailtb = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.tbNIF = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.tbSaldo = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.tbNome = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.siticoneGroupBox1.SuspendLayout();
@@ -49,7 +48,7 @@
             this.siticoneButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneButton1.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton1.Location = new System.Drawing.Point(373, 303);
+            this.siticoneButton1.Location = new System.Drawing.Point(373, 261);
             this.siticoneButton1.Name = "siticoneButton1";
             this.siticoneButton1.Size = new System.Drawing.Size(127, 47);
             this.siticoneButton1.TabIndex = 9;
@@ -61,13 +60,12 @@
             this.siticoneGroupBox1.Controls.Add(this.numEstudantetb);
             this.siticoneGroupBox1.Controls.Add(this.emailtb);
             this.siticoneGroupBox1.Controls.Add(this.tbNIF);
-            this.siticoneGroupBox1.Controls.Add(this.tbSaldo);
             this.siticoneGroupBox1.Controls.Add(this.tbNome);
             this.siticoneGroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneGroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.siticoneGroupBox1.Location = new System.Drawing.Point(193, 67);
             this.siticoneGroupBox1.Name = "siticoneGroupBox1";
-            this.siticoneGroupBox1.Size = new System.Drawing.Size(307, 230);
+            this.siticoneGroupBox1.Size = new System.Drawing.Size(307, 188);
             this.siticoneGroupBox1.TabIndex = 8;
             this.siticoneGroupBox1.Text = "Detalhes";
             // 
@@ -83,7 +81,7 @@
             this.numEstudantetb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.numEstudantetb.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.numEstudantetb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.numEstudantetb.Location = new System.Drawing.Point(14, 178);
+            this.numEstudantetb.Location = new System.Drawing.Point(14, 136);
             this.numEstudantetb.Name = "numEstudantetb";
             this.numEstudantetb.PasswordChar = '\0';
             this.numEstudantetb.PlaceholderText = "numEstudante";
@@ -104,7 +102,7 @@
             this.emailtb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.emailtb.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.emailtb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.emailtb.Location = new System.Drawing.Point(14, 178);
+            this.emailtb.Location = new System.Drawing.Point(14, 136);
             this.emailtb.Name = "emailtb";
             this.emailtb.PasswordChar = '\0';
             this.emailtb.PlaceholderText = "email";
@@ -124,7 +122,7 @@
             this.tbNIF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNIF.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbNIF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNIF.Location = new System.Drawing.Point(14, 136);
+            this.tbNIF.Location = new System.Drawing.Point(14, 94);
             this.tbNIF.MaxLength = 9;
             this.tbNIF.Name = "tbNIF";
             this.tbNIF.PasswordChar = '\0';
@@ -132,25 +130,6 @@
             this.tbNIF.SelectedText = "";
             this.tbNIF.Size = new System.Drawing.Size(200, 36);
             this.tbNIF.TabIndex = 2;
-            // 
-            // tbSaldo
-            // 
-            this.tbSaldo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbSaldo.DefaultText = "";
-            this.tbSaldo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbSaldo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbSaldo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSaldo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSaldo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSaldo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbSaldo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSaldo.Location = new System.Drawing.Point(14, 94);
-            this.tbSaldo.Name = "tbSaldo";
-            this.tbSaldo.PasswordChar = '\0';
-            this.tbSaldo.PlaceholderText = "Saldo";
-            this.tbSaldo.SelectedText = "";
-            this.tbSaldo.Size = new System.Drawing.Size(200, 36);
-            this.tbSaldo.TabIndex = 1;
             // 
             // tbNome
             // 
@@ -185,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 352);
+            this.ClientSize = new System.Drawing.Size(506, 314);
             this.Controls.Add(this.siticoneButton1);
             this.Controls.Add(this.siticoneGroupBox1);
             this.Controls.Add(this.pictureBox1);
@@ -203,7 +182,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox numEstudantetb;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox emailtb;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox tbNIF;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox tbSaldo;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox tbNome;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

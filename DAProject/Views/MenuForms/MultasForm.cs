@@ -21,9 +21,22 @@ namespace DAProject.Views
             LoadMultas();
         }
 
-        private void LoadMultas()
+        private void LoadMultas(string hourSearch = "")
         {
-            var multas = MainController.GetMultas();
+            flowLayoutPanel1.Controls.Clear();
+
+            List<Classes.Multa> multas;
+
+            if (hourSearch.Length == 0)
+            {
+                multas = MainController.GetMultas();
+            }
+            else
+            {
+                int SearchHour = Convert.ToInt32(hourSearch);
+                multas = MainController.GetMultas().Where(e => e.numHoras == SearchHour).ToList();
+            }
+            
             Console.WriteLine($"Found {multas.Count} entities.");
             foreach (var multa in multas)
             {
@@ -34,8 +47,8 @@ namespace DAProject.Views
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Controls.Clear();
-            LoadMultas();
+            string hourSearch = siticoneTextBox1.Text;
+            LoadMultas(hourSearch);
         }
 
         private void addCard_Click(object sender, EventArgs e)
@@ -43,7 +56,7 @@ namespace DAProject.Views
             Form addCard = new Form();
             try
             {
-                using (NewMultaForm newMultaForm= new NewMultaForm())
+                using (NewMultaForm newMultaForm = new NewMultaForm())
                 {
                     addCard.StartPosition = FormStartPosition.Manual;
                     addCard.FormBorderStyle = FormBorderStyle.None;
@@ -66,6 +79,12 @@ namespace DAProject.Views
             {
                 addCard.Dispose();
             }
+        }
+
+        private void siticoneTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            string hourSearch = siticoneTextBox1.Text;
+            LoadMultas(hourSearch);
         }
     }
 }

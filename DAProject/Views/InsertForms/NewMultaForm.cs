@@ -1,4 +1,5 @@
-﻿using MaterialSkin;
+﻿using DAProject.Controllers;
+using MaterialSkin;
 using MaterialSkin.Controls;
 using Siticone.Desktop.UI.WinForms;
 using System;
@@ -34,7 +35,18 @@ namespace DAProject.Views.InsertForms
                 }
                 else
                 {
+                    var multas = MainController.GetMultas();
                     var multa = new Multa { valor = Convert.ToInt32(siticoneTextBox1.Text),numHoras = Convert.ToInt32(siticoneTextBox2.Text) };
+
+                    foreach (var checkmulta in multas)
+                    {
+                        if (multa.numHoras == checkmulta.numHoras)
+                        {
+                            MessageBox.Show("Já existe uma multa com este número de horas!");
+                            return;
+                        }
+                    }
+
                     db.Multas.Add(multa);
                     db.SaveChanges();
                     this.Close();

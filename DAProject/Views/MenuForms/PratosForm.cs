@@ -50,10 +50,12 @@ namespace DAProject.Views
                 addCard.Dispose();
             }
         }
-        private void LoadPratos()
+        private void LoadPratos(string nameSearch = "")
         {
+            flowLayoutPanel1.Controls.Clear();
+            nameSearch = nameSearch.ToLower();
 
-            var pratos = MainController.GetPratos();
+            var pratos = MainController.GetPratos().Where(e => e.descricao.ToLower().Contains(nameSearch)).ToList();
             Console.WriteLine($"Found {pratos.Count} entities.");
             foreach (var prato in pratos)
             {
@@ -76,10 +78,14 @@ namespace DAProject.Views
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Controls.Clear();
-            LoadPratos();
+            string nameSearch = siticoneTextBox1.Text;
+            LoadPratos(nameSearch);
         }
 
-        
+        private void siticoneTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            string nameSearch = siticoneTextBox1.Text;
+            LoadPratos(nameSearch);
+        }
     }
 }
