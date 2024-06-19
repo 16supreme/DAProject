@@ -3,20 +3,25 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DAProject.Classes;
 
 namespace DAProject.Views
 {
     public partial class GestaoClientesForm : Form
     {
+        bool AllChecked = true;
+        bool StudentChecked = false;
+        bool ProfessorChecked = false;
         public GestaoClientesForm()
         {
             InitializeComponent();
-            LoadClientes();
+            LoadClientes(AllChecked,StudentChecked,ProfessorChecked);
         }
 
         private void addCard_Click(object sender, EventArgs e)
@@ -49,30 +54,88 @@ namespace DAProject.Views
             }
         }
 
-        private void LoadClientes()
+        private void LoadClientes(bool allchecked, bool studchecked, bool profchecked,string nameSearch = "")
         {
+            flowLayoutPanel1.Controls.Clear();
+            nameSearch = nameSearch.ToLower();
 
-            var estudantes = MainController.GetEstudantes();
-            var professores = MainController.GetProfessores();
-            Console.WriteLine($"Found {estudantes.Count} entities.");
-            Console.WriteLine($"Found {professores.Count} entities.");
-            foreach (var estudante in estudantes)
+            if (allchecked == true && studchecked == false && profchecked == false){
+                var estudantes = MainController.GetEstudantes().Where(e=>e.nome.ToLower().Contains(nameSearch)).ToList();
+                var professores = MainController.GetProfessores().Where(e => e.nome.ToLower().Contains(nameSearch)).ToList();
+                Console.WriteLine($"Found {estudantes.Count} entities.");
+                Console.WriteLine($"Found {professores.Count} entities.");
+                foreach (var estudante in estudantes)
+                {
+                    CardEstudante card = new CardEstudante(estudante);
+                    flowLayoutPanel1.Controls.Add(card);
+                }
+                foreach (var professor in professores)
+                {
+                    CardProfessor card = new CardProfessor(professor);
+                    flowLayoutPanel1.Controls.Add(card);
+                }
+            }else if(allchecked == false && studchecked == true && profchecked == false)
             {
-                CardEstudante card = new CardEstudante(estudante);
-                flowLayoutPanel1.Controls.Add(card);
+                var estudantes = MainController.GetEstudantes().Where(e => e.nome.ToLower().Contains(nameSearch)).ToList();
+                Console.WriteLine($"Found {estudantes.Count} entities.");
+                foreach (var estudante in estudantes)
+                {
+                    CardEstudante card = new CardEstudante(estudante);
+                    flowLayoutPanel1.Controls.Add(card);
+                }
             }
-            foreach (var professor in professores)
+            else if(allchecked == false && studchecked == false && profchecked == true)
             {
-                CardProfessor card = new CardProfessor(professor);
-                flowLayoutPanel1.Controls.Add(card);
+                var professores = MainController.GetProfessores().Where(e => e.nome.ToLower().Contains(nameSearch)).ToList();
+                Console.WriteLine($"Found {professores.Count} entities.");
+                foreach (var professor in professores)
+                {
+                    CardProfessor card = new CardProfessor(professor);
+                    flowLayoutPanel1.Controls.Add(card);
+                }
             }
-
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Controls.Clear();
-            LoadClientes();
+            string nameSearch = siticoneTextBox1.Text;
+            LoadClientes(AllChecked, StudentChecked, ProfessorChecked,nameSearch);
+        }
+
+        private void AllRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            AllChecked = AllRadio.Checked;
+            if (AllChecked)
+            {
+                StudentChecked = false;
+                ProfessorChecked = false;
+            }
+        }
+
+        private void studentRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            StudentChecked = studentRadio.Checked;
+            if (StudentChecked)
+            {
+                AllChecked = false;
+                ProfessorChecked = false;
+            }
+        }
+
+        private void professorRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            ProfessorChecked = professorRadio.Checked;
+            if (ProfessorChecked)
+            {
+                AllChecked = false;
+                StudentChecked = false;
+            }
+        }
+
+        private void siticoneTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            string nameSearch = siticoneTextBox1.Text;
+            LoadClientes(AllChecked,StudentChecked,ProfessorChecked,nameSearch);
         }
     }
 }

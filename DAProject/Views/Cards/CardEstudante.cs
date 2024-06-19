@@ -32,7 +32,7 @@ namespace DAProject.Views
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-                contextMenuStrip1.Show(pictureBox2, new System.Drawing.Point(0, pictureBox2.Height));
+            contextMenuStrip1.Show(pictureBox2, new System.Drawing.Point(0, pictureBox2.Height));
             
         }
 
@@ -84,6 +84,36 @@ namespace DAProject.Views
                         MessageBox.Show("Este estudante não existe!");
                     }
                 }
+            }
+        }
+
+        private void carregarSaldoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form addCard = new Form();
+            try
+            {
+                using (UpdateClienteSaldo updateClienteSaldo = new UpdateClienteSaldo(getCliente))
+                {
+                    addCard.StartPosition = FormStartPosition.Manual;
+                    addCard.FormBorderStyle = FormBorderStyle.None;
+                    addCard.Opacity = .50d;
+                    addCard.BackColor = Color.Black;
+                    addCard.WindowState = FormWindowState.Maximized;
+                    addCard.Location = this.Location;
+                    addCard.ShowInTaskbar = false;
+                    addCard.Show();
+                    updateClienteSaldo.Owner = addCard;
+                    updateClienteSaldo.ShowDialog();
+                    addCard.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                addCard.Dispose();
             }
         }
     }

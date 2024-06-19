@@ -89,10 +89,11 @@
             this.siticoneTextBox1.Location = new System.Drawing.Point(12, 12);
             this.siticoneTextBox1.Name = "siticoneTextBox1";
             this.siticoneTextBox1.PasswordChar = '\0';
-            this.siticoneTextBox1.PlaceholderText = "Pesquisar";
+            this.siticoneTextBox1.PlaceholderText = "Pesquisar (Username)";
             this.siticoneTextBox1.SelectedText = "";
             this.siticoneTextBox1.Size = new System.Drawing.Size(256, 50);
             this.siticoneTextBox1.TabIndex = 0;
+            this.siticoneTextBox1.TextChanged += new System.EventHandler(this.siticoneTextBox1_TextChanged);
             // 
             // FuncionariosForm
             // 

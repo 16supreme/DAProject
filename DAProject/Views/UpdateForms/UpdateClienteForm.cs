@@ -31,7 +31,6 @@ namespace DAProject.Views.UpdateForms
 
         private void LoadData()
         {
-            tbSaldo.Text = Convert.ToString(getCliente.saldo);
             tbNIF.Text = Convert.ToString(getCliente.nif);
             tbNome.Text = getCliente.nome;
             if (getCliente is Estudante estudante)
@@ -65,7 +64,6 @@ namespace DAProject.Views.UpdateForms
 
                     getClienteID.nome = tbNome.Text;
                     getClienteID.nif = Convert.ToInt32(tbNIF.Text);
-                    getClienteID.saldo = Convert.ToDouble(tbSaldo.Text);
 
                     if (getClienteID is Estudante getEstudante)
                     {

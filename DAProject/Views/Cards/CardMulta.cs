@@ -16,6 +16,7 @@ namespace DAProject.Views.Cards
     public partial class CardMulta : UserControl
     {
         private Classes.Multa getMulta;
+
         public CardMulta(Classes.Multa multa)
         {
             InitializeComponent();

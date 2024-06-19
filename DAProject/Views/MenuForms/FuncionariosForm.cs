@@ -49,10 +49,12 @@ namespace DAProject.Views
             }
         }
 
-        private void LoadFuncionarios()
+        private void LoadFuncionarios(string nameSearch = "")
         {
+            flowLayoutPanel1.Controls.Clear();
+            nameSearch = nameSearch.ToLower();  
 
-            var funcionarios = MainController.GetFuncionarios();
+            var funcionarios = MainController.GetFuncionarios().Where(e => e.username.ToLower().Contains(nameSearch)).ToList();
             Console.WriteLine($"Found {funcionarios.Count} entities.");
             foreach (var funcionario in funcionarios)
             {
@@ -64,8 +66,14 @@ namespace DAProject.Views
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Controls.Clear();
-            LoadFuncionarios();
+            string nameSearch = siticoneTextBox1.Text;
+            LoadFuncionarios(nameSearch);
+        }
+
+        private void siticoneTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            string nameSearch = siticoneTextBox1.Text;
+            LoadFuncionarios(nameSearch);
         }
     }
 }

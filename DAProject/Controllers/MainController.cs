@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq;
+using System.Data.Entity;
 using static DAProject.Classes;
 
 namespace DAProject.Controllers
@@ -18,6 +20,14 @@ namespace DAProject.Controllers
             using (var db = new CantinaContext())
             {
                 return db.Funcionarios.ToList();
+            }
+        }
+
+        public static List<Cliente> GetClientes()
+        {
+            using (var db = new CantinaContext())
+            {
+                return db.Clientes.ToList();
             }
         }
 
@@ -65,7 +75,7 @@ namespace DAProject.Controllers
         {
             using (var db = new CantinaContext())
             {
-                return db.Menus.ToList();
+                return db.Menus.Include(m => m.pratos).Include(m => m.extras).ToList();
             }
         }
 
@@ -73,7 +83,7 @@ namespace DAProject.Controllers
         {
             using (var db = new CantinaContext())
             {
-                return db.Reservas.ToList();
+                return db.Reservas.Include(r => r.cliente).ToList();
             }
         }
     }        

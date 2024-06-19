@@ -30,17 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lblNumEstudante = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblNome = new MaterialSkin.Controls.MaterialLabel();
             this.lblNif = new MaterialSkin.Controls.MaterialLabel();
             this.lblSaldo = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.atualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deletarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carregarSaldoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNumEstudante
@@ -55,17 +56,6 @@
             this.lblNumEstudante.Size = new System.Drawing.Size(81, 14);
             this.lblNumEstudante.TabIndex = 24;
             this.lblNumEstudante.Text = "numEstudante";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DAProject.Properties.Resources.More;
-            this.pictureBox2.Location = new System.Drawing.Point(235, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lblNome
             // 
@@ -106,6 +96,27 @@
             this.lblSaldo.TabIndex = 20;
             this.lblSaldo.Text = "Saldo";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.atualizarToolStripMenuItem,
+            this.deletarToolStripMenuItem,
+            this.carregarSaldoToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 104);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DAProject.Properties.Resources.More;
+            this.pictureBox2.Location = new System.Drawing.Point(235, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DAProject.Properties.Resources.Man_Student;
@@ -115,15 +126,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.atualizarToolStripMenuItem,
-            this.deletarToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 78);
             // 
             // atualizarToolStripMenuItem
             // 
@@ -141,6 +143,14 @@
             this.deletarToolStripMenuItem.Text = "Deletar";
             this.deletarToolStripMenuItem.Click += new System.EventHandler(this.deletarToolStripMenuItem_Click);
             // 
+            // carregarSaldoToolStripMenuItem
+            // 
+            this.carregarSaldoToolStripMenuItem.Image = global::DAProject.Properties.Resources.Money_Bag;
+            this.carregarSaldoToolStripMenuItem.Name = "carregarSaldoToolStripMenuItem";
+            this.carregarSaldoToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.carregarSaldoToolStripMenuItem.Text = "Carregar Saldo";
+            this.carregarSaldoToolStripMenuItem.Click += new System.EventHandler(this.carregarSaldoToolStripMenuItem_Click);
+            // 
             // CardEstudante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,9 +164,9 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CardEstudante";
             this.Size = new System.Drawing.Size(261, 83);
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,5 +183,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem atualizarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deletarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem carregarSaldoToolStripMenuItem;
     }
 }

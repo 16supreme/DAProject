@@ -55,13 +55,13 @@ namespace DAProject.Views
         {
             using (var db = new CantinaContext())
             {
-                if (siticoneTextBox1.TextLength == 0 || siticoneTextBox2.TextLength == 0 || siticoneTextBox3.TextLength == 0 || clientTypeCB.SelectedValue == null || (emailtb.Text.Length == 0 && numEstudantetb.Text.Length == 0))
+                if (siticoneTextBox1.TextLength == 0 || siticoneTextBox3.TextLength == 0 || clientTypeCB.SelectedValue == null || (emailtb.Text.Length == 0 && numEstudantetb.Text.Length == 0))
                 {
                     MessageBox.Show("Preencha todos os campos!");
                 }
                 else
                 {
-                    if (siticoneTextBox3.TextLength < 9)
+                    if (siticoneTextBox3.TextLength != 9)
                     {
                         MessageBox.Show("O NIF deve conter 9 digitos!");
                     }
@@ -80,7 +80,7 @@ namespace DAProject.Views
                             {
                                 if(numEstudantetb.Text.Length == 7) 
                                 {
-                                    var estudante = new Estudante { nome = siticoneTextBox1.Text, saldo = Convert.ToDouble(siticoneTextBox2.Text), nif = Convert.ToInt32(siticoneTextBox3.Text), numEstudante = Convert.ToInt32(numEstudantetb.Text) };
+                                    var estudante = new Estudante { nome = siticoneTextBox1.Text, nif = Convert.ToInt32(siticoneTextBox3.Text), numEstudante = Convert.ToInt32(numEstudantetb.Text) };
                                     db.Utilizadores.Add(estudante);
                                     db.SaveChanges();
                                     this.Close();
@@ -94,7 +94,7 @@ namespace DAProject.Views
                             {
                                 if (emailtb.Text.Contains("@"))
                                 {
-                                    var professor = new Professor { nome = siticoneTextBox1.Text, saldo = Convert.ToDouble(siticoneTextBox2.Text), nif = Convert.ToInt32(siticoneTextBox3.Text), email = emailtb.Text };
+                                    var professor = new Professor { nome = siticoneTextBox1.Text, nif = Convert.ToInt32(siticoneTextBox3.Text), email = emailtb.Text };
                                     db.Utilizadores.Add(professor);
                                     db.SaveChanges();
                                     this.Close();
