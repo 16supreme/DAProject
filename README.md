@@ -9,6 +9,8 @@ Tomás Monteiro
 
    `2231659`
 
+## Desenvolvimento e Funcionalidades
+
 Este projeto pretende criar uma aplicação de gestão que permita gerir os menus e reservas da cantina de uma escola.
 Também foram implementadas as funcionalidades necessárias para gerir os menus dos dias de uma determinada semana, controlar as reservas, carregar o saldo dos clientes e efetuar a faturação das reservas.
 
